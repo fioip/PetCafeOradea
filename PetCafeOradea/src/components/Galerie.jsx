@@ -2,7 +2,7 @@ import Banner from "./Banner";
 
 function Galerie() {
   return (
-    <div className="md:ml-[25%] lg:ml-[25%] xl:ml-[20%] h-screen bg-cyan-900">
+    <div className="md:ml-[25%] lg:ml-[25%] xl:ml-[20%] h-full">
       <Banner />
     </div>
   );
