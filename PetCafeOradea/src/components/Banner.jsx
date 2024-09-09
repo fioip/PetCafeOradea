@@ -32,7 +32,8 @@ function Banner() {
 
     case "/meniu":
       imgURL = imageMeniu;
-      title = "Welcome to Pet Cafe";
+      title = "Welcome to";
+      cafe = "Pet Cafe";
       motto = "Meniu";
       days = "Luni - Dumincă";
       hours = "09:00 - 21:30";
@@ -40,7 +41,8 @@ function Banner() {
 
     case "/galerie":
       imgURL = imageGalerie;
-      title = "Welcome to Pet Cafe";
+      title = "Welcome to";
+      cafe = "Pet Cafe";
       motto = "Galerie";
       days = "Luni - Dumincă";
       hours = "09:00 - 21:30";
@@ -48,7 +50,8 @@ function Banner() {
 
     case "/contact":
       imgURL = imageContact;
-      title = "Welcome to Pet Cafe";
+      title = "Welcome to";
+      cafe = "Pet Cafe";
       motto = "Contact";
       days = "Luni - Dumincă";
       hours = "09:00 - 21:30";
@@ -85,9 +88,7 @@ function Banner() {
             />
           </div>
           <div className="flex flex-1 items-center justify-center">
-            <h2 className="text-4xl text-center leading-[50px]">
-              {motto}
-            </h2>
+            <h2 className="text-4xl text-center leading-[50px]">{motto}</h2>
           </div>
           <div className="text-center mt-auto mb-[20px]">
             <h2 className="text-2xl">{days}</h2>
