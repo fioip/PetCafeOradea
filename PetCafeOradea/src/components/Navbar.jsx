@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/PetCafeLogo.png";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { IoMdArrowBack } from "react-icons/io";
+import { IoClose } from "react-icons/io5";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -34,7 +34,7 @@ function Navbar() {
             className="text-[#FEF2DA] focus:outline-none md:hidden absolute top-4 left-4 z-50"
             onClick={Menu}
           >
-            <IoMdArrowBack className="w-8 h-8" />
+            <IoClose className="w-10 h-10" />
           </button>
         )}
         <div className="flex justify-center items-center mt-9">
