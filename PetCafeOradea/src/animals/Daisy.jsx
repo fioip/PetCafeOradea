@@ -1,12 +1,18 @@
-import Banner from "../components/Banner";
-function Daisy() {
-  return (
-    <div className="md:ml-[25%] lg:ml-[25%] xl:ml-[20%] h-full">
-      <div className="bg-[#FFF8EA]">
-        <Banner />
-      </div>
-    </div>
-  );
-}
+import React from 'react';
+import AnimalPage from './AnimalPage';
+import { Daisy } from '../constants/AnimalDescription'; // Asigură-te că calea este corectă
 
-export default Daisy;
+const MiraPage = () => {
+  const daisyData = Daisy[0];
+
+  return (
+    <AnimalPage
+      animalTitle={daisyData.animalTitle}
+      imgURL={daisyData.imgURL}
+      denumire={daisyData.denumire}
+      additionalImages={daisyData.additionalImages}
+    />
+  );
+};
+
+export default DaisyPage;

@@ -47,14 +47,14 @@ function Navbar() {
           } h-full`}
         >
           <ul
-            className={`flex flex-col gap-4 md:gap-14 justify-center items-center ${
-              open ? "-mt-72 text-3xl md:text-4xl gap-20" : "text-2xl"
+            className={`flex flex-col gap-12 md:gap-28 lg:gap-14 justify-center items-center ${
+              open ? "-mt-72 text-3xl md:text-4xl gap-20" : "text-3xl"
             }`}
           >
             <li>
               <Link
                 to="/"
-                className="bg hover:underline"
+                className="bg hover:underline lg:text-2xl "
                 onClick={() => setOpen(false)}
               >
                 Home
@@ -63,7 +63,7 @@ function Navbar() {
             <li>
               <Link
                 to="/meniu"
-                className="hover:underline"
+                className="hover:underline lg:text-2xl"
                 onClick={() => setOpen(false)}
               >
                 Meniu
@@ -73,7 +73,7 @@ function Navbar() {
               <Link
                 to="/galerie"
                 href="#"
-                className="hover:underline"
+                className="hover:underline lg:text-2xl"
                 onClick={() => setOpen(false)}
               >
                 Galerie
@@ -82,7 +82,7 @@ function Navbar() {
             <li>
               <Link
                 to="/contact"
-                className="hover:underline"
+                className="hover:underline lg:text-2xl"
                 onClick={() => setOpen(false)}
               >
                 Contact

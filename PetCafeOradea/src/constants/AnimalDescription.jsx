@@ -1,13 +1,23 @@
+import imgMira from "../assets/photos/mira.jpeg";
+import imgKira from "../assets/photos/kira.jpeg";
+import imgTiramisu from "../assets/photos/tiramisu.jpeg";
+import imgAsh from "../assets/photos/ash.jpeg";
+import imgDaisy from "../assets/photos/mira.jpeg";
+import imgChilli from "../assets/photos/mira.jpeg";
+import imgWendy from "../assets/photos/winnie.jpeg";
+import imgWinnie from "../assets/photos/winnie.jpeg";
+
 export const Mira = [
   {
     animalTitle: "Mira",
-    imgURL: "/path/to/mira.jpg",
+    imgURL: imgMira,
+    smallText: "Sunt o domnisoara din rasa british shorthair, foarte calma, ador somnul si pliculețele...",
     denumire:
       "Sunt o domnisoara din rasa british shorthair, foarte calma, ador somnul si pliculețele. (Da, eu sunt pisicuta care adoarme pe spate intotdeauna).",
     additionalImages: [
-      "/path/to/tiramisu1.jpg",
-      "/path/to/tiramisu2.jpg",
-      "/path/to/tiramisu3.jpg",
+      imgMira,
+      imgMira,
+      imgMira,
     ],
   },
 ];
@@ -15,13 +25,14 @@ export const Mira = [
 export const Kira = [
   {
     animalTitle: "Kira",
-    imgURL: "/path/to/mira.jpg",
+    imgURL: imgKira,
+    smallText: "Sunt o fetita din rasa british shorthair, prietenoasa de obicei dar am si eu toanele mele, evident...",
     denumire:
       "Sunt o fetita din rasa british shorthair, prietenoasa de obicei dar am si eu toanele mele, evident. Imi place sa ma joc cu ghiozdanele clientilor si adorm mereu pe mese. P.S.: daca iti lasi cappuccino-ul nesupravegheat mai mult de 3 secunde fii sigur ca-l voi ataca!",
     additionalImages: [
-      "/path/to/tiramisu1.jpg",
-      "/path/to/tiramisu2.jpg",
-      "/path/to/tiramisu3.jpg",
+      imgKira,
+      imgKira,
+      imgKira,
     ],
   },
 ];
@@ -29,13 +40,14 @@ export const Kira = [
 export const Tiramisu = [
   {
     animalTitle: "Tiramisu",
-    imgURL: "/path/to/tiramisu.jpg",
+    imgURL: imgTiramisu,
+    smallText: "Sunt o fetita din rasa Siameza, foarte iubitoare si jucausa. Adorm mereu in pătuțul cațeilor si nimeni ma poate...",
     denumire:
       "Sunt o fetita din rasa Siameza, foarte iubitoare si jucausa. Adorm mereu in pătuțul cațeilor si nimeni ma poate opri din a face asta!",
     additionalImages: [
-      "/path/to/tiramisu1.jpg",
-      "/path/to/tiramisu2.jpg",
-      "/path/to/tiramisu3.jpg",
+      imgTiramisu,
+      imgTiramisu,
+      imgTiramisu,
     ],
   },
 ];
@@ -43,13 +55,14 @@ export const Tiramisu = [
 export const Ash = [
   {
     animalTitle: "Ash",
-    imgURL: "/path/to/mira.jpg",
+    imgURL: imgAsh,
+    smallText: "Eu sunt un motanel persan, evident prințul din local. Motto-ul meu in viata e “ai pliculet stau, n-ai pliculet ceau”...",
     denumire:
       "Eu sunt un motanel persan, evident prințul din local. Motto-ul meu in viata e “ai pliculet stau, n-ai pliculet ceau”. Imi plac la nebunie jucariile si mângăierea sub bărbiță. ",
     additionalImages: [
-      "/path/to/tiramisu1.jpg",
-      "/path/to/tiramisu2.jpg",
-      "/path/to/tiramisu3.jpg",
+      imgAsh,
+      imgAsh,
+      imgAsh,
     ],
   },
 ];
@@ -58,6 +71,7 @@ export const Pisu1 = [
   {
     animalTitle: "Pisu1",
     imgURL: "/path/to/mira.jpg",
+    smallText: "Această pisică adoră să fie în centrul atenției și să primească alinturi. Se va așeza lângă tine pe canapea...",
     denumire:
       "Această pisică adoră să fie în centrul atenției și să primească alinturi. Se va așeza lângă tine pe canapea sau îți va „cerși” atenția prin frecarea ușoară a botului. Este perfectă pentru cei care caută o companie afectuoasă și devotată.",
     additionalImages: [
@@ -72,6 +86,7 @@ export const Pisu2 = [
   {
     animalTitle: "Pisu2",
     imgURL: "/path/to/mira.jpg",
+    smallText: "Această pisică adoră să fie în centrul atenției și să primească alinturi. Se va așeza lângă tine pe canapea...",
     denumire:
       "Această pisică adoră să fie în centrul atenției și să primească alinturi. Se va așeza lângă tine pe canapea sau îți va „cerși” atenția prin frecarea ușoară a botului. Este perfectă pentru cei care caută o companie afectuoasă și devotată.",
     additionalImages: [
@@ -85,13 +100,14 @@ export const Pisu2 = [
 export const Daisy = [
   {
     animalTitle: "Daisy",
-    imgURL: "/path/to/mira.jpg",
+    imgURL: imgDaisy,
+    smallText: "Sunt o fetita din rasa Pomeranian, jucausa si blanda, dar nu cu toata lumea...",
     denumire:
       "Sunt o fetita din rasa Pomeranian, jucausa si blanda, dar nu cu toata lumea! Daca dorm, va rog sa ma lasati sa-mi fac semnul de frumusete ca altfel s-a zis cu voi!",
     additionalImages: [
-      "/path/to/tiramisu1.jpg",
-      "/path/to/tiramisu2.jpg",
-      "/path/to/tiramisu3.jpg",
+      imgDaisy,
+      imgDaisy,
+      imgDaisy,
     ],
   },
 ];
@@ -99,13 +115,14 @@ export const Daisy = [
 export const Chilli = [
   {
     animalTitle: "Chilli",
-    imgURL: "/path/to/mira.jpg",
+    imgURL: imgChilli,
+    smallText: "Sunt o fetita din rasa Pug, jucausa si foarte energica, dar si somnul e pe masura...",
     denumire:
       "Sunt o fetita din rasa Pug, jucausa si foarte energica, dar si somnul e pe masura!",
     additionalImages: [
-      "/path/to/tiramisu1.jpg",
-      "/path/to/tiramisu2.jpg",
-      "/path/to/tiramisu3.jpg",
+      imgChilli,
+      imgChilli,
+      imgChilli,
     ],
   },
 ];
@@ -113,13 +130,14 @@ export const Chilli = [
 export const Wendy = [
   {
     animalTitle: "Wendy",
-    imgURL: "/path/to/mira.jpg",
+    imgURL: imgWendy,
+    smallText: "Suntem doua surori din rasa Teckel, foarte jucause si adormim mereu impreuna...",
     denumire:
       "Suntem doua surori din rasa Teckel, foarte jucause si adormim mereu impreuna. Ne plac gustarile si sa ne jucam cu pisicutele!",
     additionalImages: [
-      "/path/to/tiramisu1.jpg",
-      "/path/to/tiramisu2.jpg",
-      "/path/to/tiramisu3.jpg",
+      imgWendy,
+      imgWendy,
+      imgWendy,
     ],
   },
 ];
@@ -127,13 +145,14 @@ export const Wendy = [
 export const Winnie = [
   {
     animalTitle: "Winnie",
-    imgURL: "/path/to/mira.jpg",
+    imgURL: imgWinnie,
+    smallText: "Suntem doua surori din rasa Teckel, foarte jucause si adormim mereu impreuna...",
     denumire:
       "Suntem doua surori din rasa Teckel, foarte jucause si adormim mereu impreuna. Ne plac gustarile si sa ne jucam cu pisicutele!",
     additionalImages: [
-      "/path/to/tiramisu1.jpg",
-      "/path/to/tiramisu2.jpg",
-      "/path/to/tiramisu3.jpg",
+      imgWinnie,
+      imgWinnie,
+      imgWinnie,
     ],
   },
 ];

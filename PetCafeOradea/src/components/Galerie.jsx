@@ -73,7 +73,7 @@ function Galerie() {
           isGallery={true}
         />
         <Category
-          title="Daizy"
+          title="Daisy"
           imgURL={kira}
           items={Daisy}
           showPrice={false}
@@ -81,7 +81,7 @@ function Galerie() {
           isGallery={true}
         />
         <Category
-          title="Wendy"
+          title="Chilli"
           imgURL={tiramisu}
           items={Chilli}
           showPrice={false}
@@ -89,7 +89,7 @@ function Galerie() {
           isGallery={true}
         />
         <Category
-          title="Chilli"
+          title="Wendy"
           imgURL={ash}
           items={Wendy}
           showPrice={false}

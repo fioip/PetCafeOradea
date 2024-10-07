@@ -1,12 +1,18 @@
-import Banner from "../components/Banner";
-function Kira() {
-  return (
-    <div className="md:ml-[25%] lg:ml-[25%] xl:ml-[20%] h-full">
-      <div className="bg-[#FFF8EA]">
-        <Banner />
-      </div>
-    </div>
-  );
-}
+import React from 'react';
+import AnimalPage from './AnimalPage';
+import { Kira } from '../constants/AnimalDescription'; // Asigură-te că calea este corectă
 
-export default Kira;
+const KiraPage = () => {
+  const kiraData = Kira[0];
+
+  return (
+    <AnimalPage
+      animalTitle={kiraData.animalTitle}
+      imgURL={kiraData.imgURL}
+      denumire={kiraData.denumire}
+      additionalImages={kiraData.additionalImages}
+    />
+  );
+};
+
+export default KiraPage;
