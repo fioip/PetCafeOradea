@@ -104,9 +104,7 @@ function Banner() {
             />
           </div>
           <div className="flex flex-1 items-center justify-center">
-            <h2 className="text-4xl text-center leading-[50px]">
-              {motto}
-            </h2>
+            <h2 className="text-4xl text-center leading-[50px]">{motto}</h2>
           </div>
           <div className="text-center mt-auto mb-[20px]">
             <h2 className="text-2xl">{days}</h2>
