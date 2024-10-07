@@ -4,6 +4,8 @@ import Galerie from "./components/Galerie";
 import Home from "./components/Home";
 import Meniu from "./components/Meniu";
 import Navbar from "./components/Navbar";
+import Mira from "./animals/mira";
+import AnimalPage from "./animals/AnimalPage";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="/meniu" element={<Meniu />} />
           <Route path="/galerie" element={<Galerie />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path='/galerie/Mira' element={<Mira />} />
+          <Route path="/animal/:animal" element={<AnimalPage />} />
         </Routes>
       </div>
     </div>

@@ -6,7 +6,7 @@ function Footer() {
   
                       lg:flex-row lg:space-y-0 lg:space-x-16
   
-                      xl:space-x-28 mt-5 pt-8 pb-8 mb-4 border-b-2 border-[#FFF8EA]"
+                      xl:space-x-28 pt-8 pb-8 mb-4 border-b-2 border-[#FFF8EA]"
       >
         <div className="flex flex-col justify-center items-center md:space-x-5">
           <p

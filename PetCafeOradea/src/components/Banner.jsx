@@ -32,7 +32,8 @@ function Banner() {
 
     case "/meniu":
       imgURL = imageMeniu;
-      title = "Welcome to Pet Cafe";
+      title = "Welcome to";
+      cafe = "Pet Cafe";
       motto = "Meniu";
       days = "Luni - Dumincă";
       hours = "09:00 - 21:30";
@@ -40,7 +41,8 @@ function Banner() {
 
     case "/galerie":
       imgURL = imageGalerie;
-      title = "Welcome to Pet Cafe";
+      title = "Welcome to";
+      cafe = "Pet Cafe";
       motto = "Galerie";
       days = "Luni - Dumincă";
       hours = "09:00 - 21:30";
@@ -48,11 +50,28 @@ function Banner() {
 
     case "/contact":
       imgURL = imageContact;
-      title = "Welcome to Pet Cafe";
+      title = "Welcome to";
+      cafe = "Pet Cafe";
       motto = "Contact";
       days = "Luni - Dumincă";
       hours = "09:00 - 21:30";
       break;
+    
+    case "/galerie/mira":
+      imgURL = imageHome;
+      title = "Welcome to";
+      cafe = "Pet Cafe";
+      motto = (
+        <>
+          Where <span className="text-[#EF7F00]">Paws</span> &{" "}
+          <span className="text-[#EF7F00]">People</span> meet for a{" "}
+          <span className="text-[#EF7F00]">Treat</span>!
+        </>
+      );
+      days = "Luni - Dumincă";
+      hours = "09:00 - 21:30";
+      break;
+
   }
 
   return (
