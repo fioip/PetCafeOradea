@@ -1,18 +1,20 @@
 import {
   AROME,
-  BERE_VIN,
+  BERE,
   CAFEA,
   CEAI,
   CIOCOLATA,
   COCKTAILS,
+  EXTRA,
   FRESH,
   GUSTARI,
   ICE_TEA,
   LIMONADA,
+  MILKSHAKE,
   RACORITOARE,
+  VIN,
 } from "../constants/MenuItems";
 import arome from "../assets/photos/arome.jpg";
-import bereVin from "../assets/photos/bereVin.jpg";
 import ceai from "../assets/photos/ceai.jpg";
 import cioco from "../assets/photos/cioco.jpg";
 import cocktails from "../assets/photos/cocktails.jpg";
@@ -22,8 +24,13 @@ import gustari from "../assets/photos/gustari.jpg";
 import iceTea from "../assets/photos/iceTea.jpg";
 import limonada from "../assets/photos/limonada.jpg";
 import racoritoare from "../assets/photos/racoritoare.jpg";
+import bere from "../assets/photos/beer.jpg";
+import extras from "../assets/photos/milk.jpg";
+import milkshake from "../assets/photos/milkshake.jpg";
+import vin from "../assets/photos/wine.jpg";
 
 import Banner from "./Banner";
+import Footer from "./Footer";
 
 function Meniu() {
   return (
@@ -31,14 +38,14 @@ function Meniu() {
       <div>
         <Banner />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-[#FFF8EA]">
-        {/* Category 1: Cafea de specialitate */}
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10 bg-[#FFF8EA] mt-20 mb-20">
+        {/*Cafea de specialitate */}
         <div className="relative flex flex-col p-4">
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-4
-                         lg:text-3xl lg:inset-7
+                         md:text-2xl md:inset-16
+                         lg:text-4xl lg:inset-16
                          xl:text-4xl xl:inset-28"
               style={{ zIndex: 1 }}
             >
@@ -57,21 +64,44 @@ function Meniu() {
           {CAFEA.map((cafea, index) => (
             <div
               key={index}
-              className="w-full flex flex-row justify-between mt-4"
+              className="w-full flex flex-row justify-between mt-6"
             >
-              <p className="text-[#633404] font-normal">{cafea.denumire}</p>
-              <span className="text-[#633404] font-bold">{cafea.pret}</span>
+              <p
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {cafea.denumire}
+                {cafea.gramaj && (
+                  <span
+                    className="italic font-normal text-base
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {" "}
+                    ({cafea.gramaj})
+                  </span>
+                )}
+              </p>
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {cafea.pret}
+              </span>
             </div>
           ))}
         </div>
 
-        {/* Category 2: Ceai de specialitate */}
+        {/*  Ceai de specialitate */}
         <div className="relative flex flex-col p-4">
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-4
-                         lg:text-3xl lg:inset-7
+                         md:text-2xl md:inset-16
+                         lg:text-4xl lg:inset-16
                          xl:text-4xl xl:inset-28"
               style={{ zIndex: 1 }}
             >
@@ -86,29 +116,54 @@ function Meniu() {
               className="rounded-3xl"
             />
           </div>
+
           {CEAI.map((ceai, index) => (
             <div
               key={index}
-              className="w-full flex flex-row justify-between mt-4"
+              className="w-full flex flex-row justify-between mt-6"
             >
-              <p className="text-[#633404] font-normal">{ceai.denumire}</p>
-              <span className="text-[#633404] font-bold">{ceai.pret}</span>
+              <p
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {ceai.denumire}
+                {ceai.gramaj && (
+                  <span
+                    className="italic font-normal text-base
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {" "}
+                    ({ceai.gramaj})
+                  </span>
+                )}
+              </p>
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {ceai.pret}
+              </span>
             </div>
           ))}
         </div>
 
-        {/* Category 3: Arome */}
+        {/* Arome */}
         <div className="relative flex flex-col p-4">
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-4
-                         lg:text-3xl lg:inset-7
+                         md:text-2xl md:inset-16
+                         lg:text-4xl lg:inset-16
                          xl:text-4xl xl:inset-28"
               style={{ zIndex: 1 }}
             >
               Arome
             </h1>
+
             <img
               src={arome}
               alt="arome"
@@ -117,60 +172,110 @@ function Meniu() {
               className="rounded-3xl"
             />
           </div>
+
           {AROME.map((arome, index) => (
             <div
               key={index}
-              className="w-full flex flex-row justify-between mt-4"
+              className="w-full flex flex-row justify-between mt-6"
             >
-              <p className="text-[#633404] font-normal">{arome.denumire}</p>
-              <span className="text-[#633404] font-bold">{arome.pret}</span>
+              <p
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {arome.denumire}
+                {arome.gramaj && (
+                  <span
+                    className="italic font-normal text-base
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {" "}
+                    ({arome.gramaj})
+                  </span>
+                )}
+              </p>
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {arome.pret}
+              </span>
             </div>
           ))}
         </div>
 
-        {/* Category 4: Ciocolata calda */}
+        {/* Ice Tea */}
         <div className="relative flex flex-col p-4">
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-4
-                         lg:text-3xl lg:inset-7
+                         md:text-2xl md:inset-16
+                         lg:text-4xl lg:inset-16
                          xl:text-4xl xl:inset-28"
               style={{ zIndex: 1 }}
             >
-              Ciocolată caldă
+              Ice Tea
             </h1>
+
             <img
-              src={cioco}
-              alt="ciocolata calda"
+              src={iceTea}
+              alt="iceTea"
               width={700}
               height={300}
               className="rounded-3xl"
             />
           </div>
-          {CIOCOLATA.map((ciocolata, index) => (
+
+          {ICE_TEA.map((iceTea, index) => (
             <div
               key={index}
-              className="w-full flex flex-row justify-between mt-4"
+              className="w-full flex flex-row justify-between mt-6"
             >
-              <p className="text-[#633404] font-normal">{ciocolata.denumire}</p>
-              <span className="text-[#633404] font-bold">{ciocolata.pret}</span>
+              <p
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {iceTea.denumire}
+                {iceTea.gramaj && (
+                  <span
+                    className="italic font-normal text-base
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {" "}
+                    ({iceTea.gramaj})
+                  </span>
+                )}
+              </p>
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {iceTea.pret}
+              </span>
             </div>
           ))}
         </div>
 
-        {/* Category 5: Racoritoare */}
+        {/* Racoritoare */}
         <div className="relative flex flex-col p-4">
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-4
-                         lg:text-3xl lg:inset-7
+                         md:text-2xl md:inset-16
+                         lg:text-4xl lg:inset-16
                          xl:text-4xl xl:inset-28"
               style={{ zIndex: 1 }}
             >
               Răcoritoare
             </h1>
+
             <img
               src={racoritoare}
               alt="racoritoare"
@@ -179,64 +284,54 @@ function Meniu() {
               className="rounded-3xl"
             />
           </div>
+
           {RACORITOARE.map((racoritoare, index) => (
             <div
               key={index}
-              className="w-full flex flex-row justify-between mt-4"
+              className="w-full flex flex-row justify-between mt-6"
             >
-              <p className="text-[#633404] font-normal">
+              <p
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
                 {racoritoare.denumire}
+                {racoritoare.gramaj && (
+                  <span
+                    className="italic font-normal text-base
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {" "}
+                    ({racoritoare.gramaj})
+                  </span>
+                )}
               </p>
-              <span className="text-[#633404] font-bold">
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
                 {racoritoare.pret}
               </span>
             </div>
           ))}
         </div>
 
-        {/* Category 6: Ice Tea */}
+        {/* Limonada */}
         <div className="relative flex flex-col p-4">
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-4
-                         lg:text-3xl lg:inset-7
-                         xl:text-4xl xl:inset-28"
-              style={{ zIndex: 1 }}
-            >
-              Ice Tea
-            </h1>
-            <img
-              src={iceTea}
-              alt="ice tea"
-              width={700}
-              height={300}
-              className="rounded-3xl"
-            />
-          </div>
-          {ICE_TEA.map((iceTea, index) => (
-            <div
-              key={index}
-              className="w-full flex flex-row justify-between mt-4"
-            >
-              <p className="text-[#633404] font-normal">{iceTea.denumire}</p>
-              <span className="text-[#633404] font-bold">{iceTea.pret}</span>
-            </div>
-          ))}
-        </div>
-
-        {/* Category 7: Limonada */}
-        <div className="relative flex flex-col p-4">
-          <div className="relative flex justify-center items-center">
-            <h1
-              className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-4
-                         lg:text-3xl lg:inset-7
+                         md:text-2xl md:inset-16
+                         lg:text-4xl lg:inset-16
                          xl:text-4xl xl:inset-28"
               style={{ zIndex: 1 }}
             >
               Limonadă
             </h1>
+
             <img
               src={limonada}
               alt="limonada"
@@ -245,29 +340,110 @@ function Meniu() {
               className="rounded-3xl"
             />
           </div>
+
           {LIMONADA.map((limonada, index) => (
             <div
               key={index}
-              className="w-full flex flex-row justify-between mt-4"
+              className="w-full flex flex-row justify-between mt-6"
             >
-              <p className="text-[#633404] font-normal">{limonada.denumire}</p>
-              <span className="text-[#633404] font-bold">{limonada.pret}</span>
+              <p
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {limonada.denumire}
+                {limonada.gramaj && (
+                  <span
+                    className="italic font-normal text-base
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {" "}
+                    ({limonada.gramaj})
+                  </span>
+                )}
+              </p>
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {limonada.pret}
+              </span>
             </div>
           ))}
         </div>
 
-        {/* Category 8: Fresh */}
+        {/* Ciocolata calda */}
         <div className="relative flex flex-col p-4">
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-4
-                         lg:text-3xl lg:inset-7
+                         md:text-2xl md:inset-16
+                         lg:text-4xl lg:inset-16
+                         xl:text-4xl xl:inset-28"
+              style={{ zIndex: 1 }}
+            >
+              Ciocolată Caldă
+            </h1>
+
+            <img
+              src={cioco}
+              alt="ciocolata calda"
+              width={700}
+              height={300}
+              className="rounded-3xl"
+            />
+          </div>
+
+          {CIOCOLATA.map((ciocolata, index) => (
+            <div
+              key={index}
+              className="w-full flex flex-row justify-between mt-6"
+            >
+              <p
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {ciocolata.denumire}
+                {ciocolata.gramaj && (
+                  <span
+                    className="italic font-normal text-base
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {" "}
+                    ({ciocolata.gramaj})
+                  </span>
+                )}
+              </p>
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {ciocolata.pret}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Fresh */}
+        <div className="relative flex flex-col p-4">
+          <div className="relative flex justify-center items-center">
+            <h1
+              className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
+                         md:text-2xl md:inset-16
+                         lg:text-4xl lg:inset-16
                          xl:text-4xl xl:inset-28"
               style={{ zIndex: 1 }}
             >
               Fresh
             </h1>
+
             <img
               src={fresh}
               alt="fresh"
@@ -276,60 +452,110 @@ function Meniu() {
               className="rounded-3xl"
             />
           </div>
+
           {FRESH.map((fresh, index) => (
             <div
               key={index}
-              className="w-full flex flex-row justify-between mt-4"
+              className="w-full flex flex-row justify-between mt-6"
             >
-              <p className="text-[#633404] font-normal">{fresh.denumire}</p>
-              <span className="text-[#633404] font-bold">{fresh.pret}</span>
+              <p
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {fresh.denumire}
+                {fresh.gramaj && (
+                  <span
+                    className="italic font-normal text-base
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {" "}
+                    ({fresh.gramaj})
+                  </span>
+                )}
+              </p>
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {fresh.pret}
+              </span>
             </div>
           ))}
         </div>
 
-        {/* Category 9: Bere si vin */}
+        {/* Bere*/}
         <div className="relative flex flex-col p-4">
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-4
-                         lg:text-3xl lg:inset-7
+                         md:text-2xl md:inset-16
+                         lg:text-4xl lg:inset-16
                          xl:text-4xl xl:inset-28"
               style={{ zIndex: 1 }}
             >
-              Bere & Vin
+              Bere
             </h1>
+
             <img
-              src={bereVin}
-              alt="bere & vin"
+              src={bere}
+              alt="bere"
               width={700}
               height={300}
               className="rounded-3xl"
             />
           </div>
-          {BERE_VIN.map((bereVin, index) => (
+
+          {BERE.map((bere, index) => (
             <div
               key={index}
-              className="w-full flex flex-row justify-between mt-4"
+              className="w-full flex flex-row justify-between mt-6"
             >
-              <p className="text-[#633404] font-normal">{bereVin.denumire}</p>
-              <span className="text-[#633404] font-bold">{bereVin.pret}</span>
+              <p
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {bere.denumire}
+                {bere.gramaj && (
+                  <span
+                    className="italic font-normal text-base
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {" "}
+                    ({bere.gramaj})
+                  </span>
+                )}
+              </p>
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {bere.pret}
+              </span>
             </div>
           ))}
         </div>
 
-        {/* Category 10: Cocktails */}
+        {/* Cocktails */}
         <div className="relative flex flex-col p-4">
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-4
-                         lg:text-3xl lg:inset-7
+                         md:text-2xl md:inset-16
+                         lg:text-4xl lg:inset-16
                          xl:text-4xl xl:inset-28"
               style={{ zIndex: 1 }}
             >
               Cocktails
             </h1>
+
             <img
               src={cocktails}
               alt="cocktails"
@@ -338,29 +564,166 @@ function Meniu() {
               className="rounded-3xl"
             />
           </div>
+
           {COCKTAILS.map((cocktails, index) => (
             <div
               key={index}
-              className="w-full flex flex-row justify-between mt-4"
+              className="w-full flex flex-row justify-between mt-6"
             >
-              <p className="text-[#633404] font-normal">{cocktails.denumire}</p>
-              <span className="text-[#633404] font-bold">{cocktails.pret}</span>
+              <p
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {cocktails.denumire}
+                {cocktails.gramaj && (
+                  <span
+                    className="italic font-normal text-base
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {" "}
+                    ({cocktails.gramaj})
+                  </span>
+                )}
+              </p>
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {cocktails.pret}
+              </span>
             </div>
           ))}
         </div>
 
-        {/* Category 11: Gustari */}
+        {/* Vin */}
         <div className="relative flex flex-col p-4">
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-4
-                         lg:text-3xl lg:inset-7
+                         md:text-2xl md:inset-16
+                         lg:text-4xl lg:inset-16
+                         xl:text-4xl xl:inset-28"
+              style={{ zIndex: 1 }}
+            >
+              Vin
+            </h1>
+
+            <img
+              src={vin}
+              alt="vin"
+              width={700}
+              height={300}
+              className="rounded-3xl"
+            />
+          </div>
+
+          {VIN.map((vin, index) => (
+            <div
+              key={index}
+              className="w-full flex flex-row justify-between mt-6"
+            >
+              <p
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {vin.denumire}
+                {vin.gramaj && (
+                  <span
+                    className="italic font-normal text-base
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {" "}
+                    ({vin.gramaj})
+                  </span>
+                )}
+              </p>
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {vin.pret}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Category 12: MILKSHAKE */}
+        <div className="relative flex flex-col p-4">
+          <div className="relative flex justify-center items-center">
+            <h1
+              className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
+                         md:text-2xl md:inset-16
+                         lg:text-4xl lg:inset-16
+                         xl:text-4xl xl:inset-28"
+              style={{ zIndex: 1 }}
+            >
+              Milkshake
+            </h1>
+
+            <img
+              src={milkshake}
+              alt="milkshake"
+              width={700}
+              height={300}
+              className="rounded-3xl"
+            />
+          </div>
+
+          {MILKSHAKE.map((milkshake, index) => (
+            <div
+              key={index}
+              className="w-full flex flex-row justify-between mt-6"
+            >
+              <p
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {milkshake.denumire}
+                {milkshake.gramaj && (
+                  <span
+                    className="italic font-normal text-base
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {" "}
+                    ({milkshake.gramaj})
+                  </span>
+                )}
+              </p>
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {milkshake.pret}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Gustari */}
+        <div className="relative flex flex-col p-4">
+          <div className="relative flex justify-center items-center">
+            <h1
+              className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
+                         md:text-2xl md:inset-16
+                         lg:text-4xl lg:inset-16
                          xl:text-4xl xl:inset-28"
               style={{ zIndex: 1 }}
             >
               Gustări
             </h1>
+
             <img
               src={gustari}
               alt="gustari"
@@ -369,16 +732,99 @@ function Meniu() {
               className="rounded-3xl"
             />
           </div>
+
           {GUSTARI.map((gustari, index) => (
             <div
               key={index}
-              className="w-full flex flex-row justify-between mt-4"
+              className="w-full flex flex-row justify-between mt-6"
             >
-              <p className="text-[#633404] font-normal">{gustari.denumire}</p>
-              <span className="text-[#633404] font-bold">{gustari.pret}</span>
+              <p
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {gustari.denumire}
+                {gustari.gramaj && (
+                  <span
+                    className="italic font-normal text-base
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {" "}
+                    ({gustari.gramaj})
+                  </span>
+                )}
+              </p>
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {gustari.pret}
+              </span>
             </div>
           ))}
         </div>
+
+        {/* EXTRA */}
+        <div className="relative flex flex-col p-4">
+          <div className="relative flex justify-center items-center">
+            <h1
+              className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
+                         md:text-2xl md:inset-16
+                         lg:text-4xl lg:inset-16
+                         xl:text-4xl xl:inset-28"
+              style={{ zIndex: 1 }}
+            >
+              Extra
+            </h1>
+
+            <img
+              src={extras}
+              alt="extras"
+              width={700}
+              height={300}
+              className="rounded-3xl"
+            />
+          </div>
+
+          {EXTRA.map((extras, index) => (
+            <div
+              key={index}
+              className="w-full flex flex-row justify-between mt-6"
+            >
+              <p
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {extras.denumire}
+                {extras.gramaj && (
+                  <span
+                    className="italic font-normal text-base
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {" "}
+                    ({extras.gramaj})
+                  </span>
+                )}
+              </p>
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {extras.pret}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
