@@ -24,7 +24,7 @@ function Home() {
             />
           </div>
           <h2
-            className="text-justify leading-7 md:leading-relaxed lg:leading-9 sm:leading-6 text-lg 
+            className="text-justify leading-relaxed md:leading-relaxed lg:leading-9 text-xl 
           md:text-3xl lg:text-2xl mt-6 md:mt-4 lg:mt-0 md:mr-12 lg:mr-16 text-[#633404] font-medium "
           >
             În inima Oradei, Pet Cafe Oradea este o oază de liniște și bucurie

@@ -39,7 +39,7 @@ function Category({
           >
             {/* Denumire articol */}
             <p className="text-[#633404] font-normal text-lg">
-              {item.denumire}
+              {item.smallText}
             </p>
 
             {/* Prețul este afișat doar dacă `showPrice` este true și nu e galerie */}
@@ -53,7 +53,7 @@ function Category({
                 <Link to={`/animal/${item.animalTitle.toLowerCase()}`}>
                   <button className="bg-[#633404] text-white px-4 py-2 rounded-lg text-lg transition-all duration-300 ease-in-out hover:bg-[#633304bb] hover:text-white hover:shadow-lg"
                   style={{ boxShadow: "4px 4px 15px rgba(0, 0, 0, 0.7)" }}>
-                    Vezi mai multe
+                    Vezi mai multe &gt;
                   </button>
                 </Link>
               </div>

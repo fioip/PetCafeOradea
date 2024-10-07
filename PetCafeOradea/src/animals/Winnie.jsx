@@ -1,13 +1,18 @@
-import Banner from "../components/Banner";
+import React from 'react';
+import AnimalPage from './AnimalPage';
+import { Winnie } from '../constants/AnimalDescription'; // Asigură-te că calea este corectă
 
-function Winnie() {
+const WinniePage = () => {
+  const winnieData = Winnie[0];
+
   return (
-    <div className="md:ml-[25%] lg:ml-[25%] xl:ml-[20%] h-full">
-      <div className="bg-[#FFF8EA]">
-        <Banner />
-      </div>
-    </div>
+    <AnimalPage
+      animalTitle={winnieData.animalTitle}
+      imgURL={winnieData.imgURL}
+      denumire={winnieData.denumire}
+      additionalImages={winnieData.additionalImages}
+    />
   );
-}
+};
 
-export default Winnie;
+export default WinniePage;
