@@ -108,7 +108,6 @@ function Galerie() {
       <Footer />
     </div>
   );
-  );
 }
 
 export default Galerie;
