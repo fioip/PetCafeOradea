@@ -13,7 +13,9 @@ function Banner() {
   let imgURL;
   let motto;
   let days;
+  let weekendDays;
   let hours;
+  let weekendHours;
   switch (location.pathname) {
     case "/":
       imgURL = imageHome;
@@ -26,8 +28,10 @@ function Banner() {
           <span className="text-[#EF7F00]">Treat</span>!
         </>
       );
-      days = "Luni - Dumincă";
-      hours = "09:00 - 21:30";
+      days = "Luni - Vineri";
+      hours = "07:00 - 21:30";
+      weekendDays = "Sâmbătă - Duminică";
+      weekendHours = "10:00 - 21:30";
       break;
 
     case "/meniu":
@@ -35,8 +39,10 @@ function Banner() {
       title = "Welcome to";
       cafe = "Pet Cafe";
       motto = "Meniu";
-      days = "Luni - Dumincă";
-      hours = "09:00 - 21:30";
+      days = "Luni - Vineri";
+      hours = "07:00 - 21:30";
+      weekendDays = "Sâmbătă - Duminică";
+      weekendHours = "10:00 - 21:30";
       break;
 
     case "/galerie":
@@ -44,8 +50,10 @@ function Banner() {
       title = "Welcome to";
       cafe = "Pet Cafe";
       motto = "Galerie";
-      days = "Luni - Dumincă";
-      hours = "09:00 - 21:30";
+      days = "Luni - Vineri";
+      hours = "07:00 - 21:30";
+      weekendDays = "Sâmbătă - Duminică";
+      weekendHours = "10:00 - 21:30";
       break;
 
     case "/contact":
@@ -53,10 +61,12 @@ function Banner() {
       title = "Welcome to";
       cafe = "Pet Cafe";
       motto = "Contact";
-      days = "Luni - Dumincă";
-      hours = "09:00 - 21:30";
+      days = "Luni - Vineri";
+      hours = "07:00 - 21:30";
+      weekendDays = "Sâmbătă - Duminică";
+      weekendHours = "10:00 - 21:30";
       break;
-    
+
     case "/galerie/mira":
       imgURL = imageHome;
       title = "Welcome to";
@@ -68,10 +78,11 @@ function Banner() {
           <span className="text-[#EF7F00]">Treat</span>!
         </>
       );
-      days = "Luni - Dumincă";
-      hours = "09:00 - 21:30";
+      days = "Luni - Vineri";
+      hours = "07:00 - 21:30";
+      weekendDays = "Sâmbătă - Duminică";
+      weekendHours = "10:00 - 21:30";
       break;
-
   }
 
   return (
@@ -106,9 +117,16 @@ function Banner() {
           <div className="flex flex-1 items-center justify-center">
             <h2 className="text-4xl text-center leading-[50px]">{motto}</h2>
           </div>
-          <div className="text-center mt-auto mb-[20px]">
-            <h2 className="text-2xl">{days}</h2>
-            <h2 className="text-2xl">{hours}</h2>
+
+          <div className="flex flex-row justify-center items-center">
+            <div className="text-center mt-auto mb-[20px] mr-20">
+              <h2 className="text-2xl">{days}</h2>
+              <h2 className="text-2xl">{hours}</h2>
+            </div>
+            <div className="text-center mt-auto mb-[20px]">
+              <h2 className="text-2xl">{weekendDays}</h2>
+              <h2 className="text-2xl">{weekendHours}</h2>
+            </div>
           </div>
         </div>
       </div>
