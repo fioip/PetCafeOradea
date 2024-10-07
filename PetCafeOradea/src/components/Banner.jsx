@@ -56,6 +56,22 @@ function Banner() {
       days = "Luni - Dumincă";
       hours = "09:00 - 21:30";
       break;
+    
+    case "/galerie/mira":
+      imgURL = imageHome;
+      title = "Welcome to";
+      cafe = "Pet Cafe";
+      motto = (
+        <>
+          Where <span className="text-[#EF7F00]">Paws</span> &{" "}
+          <span className="text-[#EF7F00]">People</span> meet for a{" "}
+          <span className="text-[#EF7F00]">Treat</span>!
+        </>
+      );
+      days = "Luni - Dumincă";
+      hours = "09:00 - 21:30";
+      break;
+
   }
 
   return (
