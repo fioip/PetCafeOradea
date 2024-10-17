@@ -66,24 +66,25 @@ function Meniu() {
               key={index}
               className="w-full flex flex-row justify-between mt-6"
             >
-              <p
-                className="text-[#633404] font-semibold text-xl
+              <div>
+                <p
+                  className="text-[#633404] font-semibold text-xl
                             md:text-2xl
                             lg:text-2xl"
-              >
-                {cafea.denumire}
+                >
+                  {cafea.denumire}
+                </p>
                 {cafea.gramaj && (
                   <span
-                    className="italic font-normal text-base
+                    className="italic font-normal text-base text-[#EF7F00]
                                 md:text-lg
                                 lg:text-xl
                                 xl:text-xl"
                   >
-                    {" "}
-                    ({cafea.gramaj})
+                    {cafea.gramaj}
                   </span>
                 )}
-              </p>
+              </div>
               <span
                 className="text-[#633404] font-semibold text-xl
                             md:text-2xl
@@ -122,24 +123,25 @@ function Meniu() {
               key={index}
               className="w-full flex flex-row justify-between mt-6"
             >
-              <p
-                className="text-[#633404] font-semibold text-xl
+              <div>
+                <p
+                  className="text-[#633404] font-semibold text-xl
                             md:text-2xl
                             lg:text-2xl"
-              >
-                {ceai.denumire}
+                >
+                  {ceai.denumire}
+                </p>
                 {ceai.gramaj && (
                   <span
-                    className="italic font-normal text-base
+                    className="italic font-normal text-base text-[#EF7F00]
                                 md:text-lg
                                 lg:text-xl
                                 xl:text-xl"
                   >
-                    {" "}
-                    ({ceai.gramaj})
+                    {ceai.gramaj}
                   </span>
                 )}
-              </p>
+              </div>
               <span
                 className="text-[#633404] font-semibold text-xl
                             md:text-2xl
@@ -178,24 +180,25 @@ function Meniu() {
               key={index}
               className="w-full flex flex-row justify-between mt-6"
             >
-              <p
-                className="text-[#633404] font-semibold text-xl
+              <div>
+                <p
+                  className="text-[#633404] font-semibold text-xl
                             md:text-2xl
                             lg:text-2xl"
-              >
-                {arome.denumire}
+                >
+                  {arome.denumire}
+                </p>
                 {arome.gramaj && (
                   <span
-                    className="italic font-normal text-base
+                    className="italic font-normal text-base text-[#EF7F00]
                                 md:text-lg
                                 lg:text-xl
                                 xl:text-xl"
                   >
-                    {" "}
-                    ({arome.gramaj})
+                    {arome.gramaj}
                   </span>
                 )}
-              </p>
+              </div>
               <span
                 className="text-[#633404] font-semibold text-xl
                             md:text-2xl
@@ -234,24 +237,25 @@ function Meniu() {
               key={index}
               className="w-full flex flex-row justify-between mt-6"
             >
-              <p
-                className="text-[#633404] font-semibold text-xl
+              <div>
+                <p
+                  className="text-[#633404] font-semibold text-xl
                             md:text-2xl
                             lg:text-2xl"
-              >
-                {iceTea.denumire}
+                >
+                  {iceTea.denumire}
+                </p>
                 {iceTea.gramaj && (
                   <span
-                    className="italic font-normal text-base
+                    className="italic font-normal text-base text-[#EF7F00]
                                 md:text-lg
                                 lg:text-xl
                                 xl:text-xl"
                   >
-                    {" "}
-                    ({iceTea.gramaj})
+                    {iceTea.gramaj}
                   </span>
                 )}
-              </p>
+              </div>
               <span
                 className="text-[#633404] font-semibold text-xl
                             md:text-2xl
@@ -290,24 +294,25 @@ function Meniu() {
               key={index}
               className="w-full flex flex-row justify-between mt-6"
             >
-              <p
-                className="text-[#633404] font-semibold text-xl
+              <div>
+                <p
+                  className="text-[#633404] font-semibold text-xl
                             md:text-2xl
                             lg:text-2xl"
-              >
-                {racoritoare.denumire}
+                >
+                  {racoritoare.denumire}
+                </p>
                 {racoritoare.gramaj && (
                   <span
-                    className="italic font-normal text-base
+                    className="italic font-normal text-base text-[#EF7F00]
                                 md:text-lg
                                 lg:text-xl
                                 xl:text-xl"
                   >
-                    {" "}
-                    ({racoritoare.gramaj})
+                    {racoritoare.gramaj}
                   </span>
                 )}
-              </p>
+              </div>
               <span
                 className="text-[#633404] font-semibold text-xl
                             md:text-2xl
@@ -346,24 +351,25 @@ function Meniu() {
               key={index}
               className="w-full flex flex-row justify-between mt-6"
             >
-              <p
-                className="text-[#633404] font-semibold text-xl
+              <div>
+                <p
+                  className="text-[#633404] font-semibold text-xl
                             md:text-2xl
                             lg:text-2xl"
-              >
-                {limonada.denumire}
+                >
+                  {limonada.denumire}
+                </p>
                 {limonada.gramaj && (
                   <span
-                    className="italic font-normal text-base
+                    className="italic font-normal text-base text-[#EF7F00]
                                 md:text-lg
                                 lg:text-xl
                                 xl:text-xl"
                   >
-                    {" "}
-                    ({limonada.gramaj})
+                    {limonada.gramaj}
                   </span>
                 )}
-              </p>
+              </div>
               <span
                 className="text-[#633404] font-semibold text-xl
                             md:text-2xl
@@ -402,24 +408,25 @@ function Meniu() {
               key={index}
               className="w-full flex flex-row justify-between mt-6"
             >
-              <p
-                className="text-[#633404] font-semibold text-xl
+              <div>
+                <p
+                  className="text-[#633404] font-semibold text-xl
                             md:text-2xl
                             lg:text-2xl"
-              >
-                {ciocolata.denumire}
+                >
+                  {ciocolata.denumire}
+                </p>
                 {ciocolata.gramaj && (
                   <span
-                    className="italic font-normal text-base
+                    className="italic font-normal text-base text-[#EF7F00]
                                 md:text-lg
                                 lg:text-xl
                                 xl:text-xl"
                   >
-                    {" "}
-                    ({ciocolata.gramaj})
+                    {ciocolata.gramaj}
                   </span>
                 )}
-              </p>
+              </div>
               <span
                 className="text-[#633404] font-semibold text-xl
                             md:text-2xl
@@ -458,24 +465,25 @@ function Meniu() {
               key={index}
               className="w-full flex flex-row justify-between mt-6"
             >
-              <p
-                className="text-[#633404] font-semibold text-xl
+              <div>
+                <p
+                  className="text-[#633404] font-semibold text-xl
                             md:text-2xl
                             lg:text-2xl"
-              >
-                {fresh.denumire}
+                >
+                  {fresh.denumire}
+                </p>
                 {fresh.gramaj && (
                   <span
-                    className="italic font-normal text-base
+                    className="italic font-normal text-base text-[#EF7F00]
                                 md:text-lg
                                 lg:text-xl
                                 xl:text-xl"
                   >
-                    {" "}
-                    ({fresh.gramaj})
+                    {fresh.gramaj}
                   </span>
                 )}
-              </p>
+              </div>
               <span
                 className="text-[#633404] font-semibold text-xl
                             md:text-2xl
@@ -514,24 +522,25 @@ function Meniu() {
               key={index}
               className="w-full flex flex-row justify-between mt-6"
             >
-              <p
-                className="text-[#633404] font-semibold text-xl
+              <div>
+                <p
+                  className="text-[#633404] font-semibold text-xl
                             md:text-2xl
                             lg:text-2xl"
-              >
-                {bere.denumire}
+                >
+                  {bere.denumire}
+                </p>
                 {bere.gramaj && (
                   <span
-                    className="italic font-normal text-base
+                    className="italic font-normal text-base text-[#EF7F00]
                                 md:text-lg
                                 lg:text-xl
                                 xl:text-xl"
                   >
-                    {" "}
-                    ({bere.gramaj})
+                    {bere.gramaj}
                   </span>
                 )}
-              </p>
+              </div>
               <span
                 className="text-[#633404] font-semibold text-xl
                             md:text-2xl
@@ -568,30 +577,33 @@ function Meniu() {
           {COCKTAILS.map((cocktails, index) => (
             <div
               key={index}
-              className="w-full flex flex-row justify-between mt-6"
+              className="w-full flex flex-row justify-between mt-6 items-start"
             >
-              <p
-                className="text-[#633404] font-semibold text-xl
+              <div className="max-w-[80%]">
+                {" "}
+                <p
+                  className="text-[#633404] font-semibold text-xl
                             md:text-2xl
                             lg:text-2xl"
-              >
-                {cocktails.denumire}
+                >
+                  {cocktails.denumire}
+                </p>
                 {cocktails.gramaj && (
                   <span
-                    className="italic font-normal text-base
+                    className="italic font-normal text-base text-[#EF7F00]
                                 md:text-lg
                                 lg:text-xl
                                 xl:text-xl"
                   >
-                    {" "}
-                    ({cocktails.gramaj})
+                    {cocktails.gramaj}
                   </span>
                 )}
-              </p>
+              </div>
               <span
                 className="text-[#633404] font-semibold text-xl
                             md:text-2xl
-                            lg:text-2xl"
+                            lg:text-2xl
+                            whitespace-nowrap ml-4"
               >
                 {cocktails.pret}
               </span>
@@ -626,24 +638,25 @@ function Meniu() {
               key={index}
               className="w-full flex flex-row justify-between mt-6"
             >
-              <p
-                className="text-[#633404] font-semibold text-xl
+              <div>
+                <p
+                  className="text-[#633404] font-semibold text-xl
                             md:text-2xl
                             lg:text-2xl"
-              >
-                {vin.denumire}
+                >
+                  {vin.denumire}
+                </p>
                 {vin.gramaj && (
                   <span
-                    className="italic font-normal text-base
+                    className="italic font-normal text-base text-[#EF7F00]
                                 md:text-lg
                                 lg:text-xl
                                 xl:text-xl"
                   >
-                    {" "}
-                    ({vin.gramaj})
+                    {vin.gramaj}
                   </span>
                 )}
-              </p>
+              </div>
               <span
                 className="text-[#633404] font-semibold text-xl
                             md:text-2xl
@@ -655,7 +668,7 @@ function Meniu() {
           ))}
         </div>
 
-        {/* Category 12: MILKSHAKE */}
+        {/* MILKSHAKE */}
         <div className="relative flex flex-col p-4">
           <div className="relative flex justify-center items-center">
             <h1
@@ -682,24 +695,25 @@ function Meniu() {
               key={index}
               className="w-full flex flex-row justify-between mt-6"
             >
-              <p
-                className="text-[#633404] font-semibold text-xl
+              <div>
+                <p
+                  className="text-[#633404] font-semibold text-xl
                             md:text-2xl
                             lg:text-2xl"
-              >
-                {milkshake.denumire}
+                >
+                  {milkshake.denumire}
+                </p>
                 {milkshake.gramaj && (
                   <span
-                    className="italic font-normal text-base
+                    className="italic font-normal text-base text-[#EF7F00]
                                 md:text-lg
                                 lg:text-xl
                                 xl:text-xl"
                   >
-                    {" "}
-                    ({milkshake.gramaj})
+                    {milkshake.gramaj}
                   </span>
                 )}
-              </p>
+              </div>
               <span
                 className="text-[#633404] font-semibold text-xl
                             md:text-2xl
@@ -738,24 +752,25 @@ function Meniu() {
               key={index}
               className="w-full flex flex-row justify-between mt-6"
             >
-              <p
-                className="text-[#633404] font-semibold text-xl
+              <div>
+                <p
+                  className="text-[#633404] font-semibold text-xl
                             md:text-2xl
                             lg:text-2xl"
-              >
-                {gustari.denumire}
+                >
+                  {gustari.denumire}
+                </p>
                 {gustari.gramaj && (
                   <span
-                    className="italic font-normal text-base
+                    className="italic font-normal text-base text-[#EF7F00]
                                 md:text-lg
                                 lg:text-xl
                                 xl:text-xl"
                   >
-                    {" "}
-                    ({gustari.gramaj})
+                    {gustari.gramaj}
                   </span>
                 )}
-              </p>
+              </div>
               <span
                 className="text-[#633404] font-semibold text-xl
                             md:text-2xl
@@ -794,24 +809,25 @@ function Meniu() {
               key={index}
               className="w-full flex flex-row justify-between mt-6"
             >
-              <p
-                className="text-[#633404] font-semibold text-xl
+              <div>
+                <p
+                  className="text-[#633404] font-semibold text-xl
                             md:text-2xl
                             lg:text-2xl"
-              >
-                {extras.denumire}
+                >
+                  {extras.denumire}
+                </p>
                 {extras.gramaj && (
                   <span
-                    className="italic font-normal text-base
+                    className="italic font-normal text-base text-[#EF7F00]
                                 md:text-lg
                                 lg:text-xl
                                 xl:text-xl"
                   >
-                    {" "}
-                    ({extras.gramaj})
+                    {extras.gramaj}
                   </span>
                 )}
-              </p>
+              </div>
               <span
                 className="text-[#633404] font-semibold text-xl
                             md:text-2xl
