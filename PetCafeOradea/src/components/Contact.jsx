@@ -3,51 +3,86 @@ import Footer from "./Footer";
 import { FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
 
 function Contact() {
   return (
-    <div className="md:ml-[25%] lg:ml-[25%] xl:ml-[20%] h-screen">
+    <div className="md:ml-[15%] lg:ml-[10%] xl:ml-[10%] h-screen">
       <div className="bg-[#FFF8EA]">
         <Banner />
 
-        <div>
-          <div className="flex flex-col lg:flex-row lg:space-x-52 justify-center items-center">
-            {/* Phone Section */}
-            <div className="flex flex-col mt-14 justify-center items-center space-y-4">
-              <FaPhone className="text-[#633404] text-6xl" />
-              <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl font-medium text-[#633404]">
-                Telefon
-              </p>
-              <p className="font-semibold text-2xl md:text-3xl lg:text-2xl text-[#EF7F00]">
-                0712 123 123
-              </p>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center items-center mt-16">
+          {/* Phone Section */}
+          <div className="flex flex-col justify-center items-center space-y-4">
+            <FaPhone className="text-[#633404] text-6xl" />
+            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl font-medium text-[#633404]">
+              Telefon
+            </p>
+            <p className="font-semibold text-2xl md:text-3xl lg:text-2xl text-[#EF7F00]">
+              0712 123 123
+            </p>
+          </div>
 
-            {/* Email Section */}
-            <div className="flex flex-col mt-12 justify-center items-center space-y-4">
-              <IoMdMail className="text-[#633404] text-6xl" />
-              <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl font-medium text-[#633404]">
-                Mail
-              </p>
-              <p className="font-semibold text-2xl md:text-3xl lg:text-2xl text-[#EF7F00]">
-                pet.cafe@yahoo.com
-              </p>
-            </div>
+          {/* Email Section */}
+          <div className="flex flex-col justify-center items-center space-y-4">
+            <IoMdMail className="text-[#633404] text-6xl" />
+            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl font-medium text-[#633404]">
+              Mail
+            </p>
+            <p className="font-semibold text-2xl md:text-3xl lg:text-2xl text-[#EF7F00]">
+              pet.cafe@yahoo.com
+            </p>
+          </div>
 
-            {/* Location Section */}
-            <div className="flex flex-col mt-16 justify-center items-center space-y-4">
-              <FaLocationDot className="text-[#633404] text-6xl" />
-              <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl font-medium text-[#633404]">
-                Locație
-              </p>
-              <p className="font-semibold text-2xl md:text-3xl lg:text-2xl text-[#EF7F00] flex flex-col text-center">
-                Piața 1 Decembrie
-                <span>Nr. 12, Oradea</span>
-              </p>
-            </div>
+          {/* Location Section */}
+          <div className="flex flex-col justify-center items-center space-y-4">
+            <FaLocationDot className="text-[#633404] text-6xl" />
+            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl font-medium text-[#633404]">
+              Locație
+            </p>
+            <p className="font-semibold text-2xl md:text-3xl lg:text-2xl text-[#EF7F00] flex flex-col text-center">
+              Piața 1 Decembrie
+              <span>Nr. 12, Oradea</span>
+            </p>
+          </div>
+
+          {/* Instagram Section */}
+          <div className="flex flex-col justify-center items-center space-y-4">
+            <FaInstagram className="text-[#633404] text-6xl" />
+            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl font-medium text-[#633404]">
+              Instagram
+            </p>
+            <p className="font-semibold text-2xl md:text-3xl lg:text-2xl text-[#EF7F00] text-center">
+              petcafeoradea
+            </p>
+          </div>
+
+          {/* Facebook Section */}
+          <div className="flex flex-col justify-center items-center space-y-4">
+            <FaFacebook className="text-[#633404] text-6xl" />
+            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl font-medium text-[#633404]">
+              Facebook
+            </p>
+            <p className="font-semibold text-2xl md:text-3xl lg:text-2xl text-[#EF7F00] text-center">
+              Pet Cafe Oradea
+            </p>
+          </div>
+
+          {/* Tik Tok Section */}
+          <div className="flex flex-col justify-center items-center space-y-4">
+            <FaTiktok className="text-[#633404] text-6xl" />
+            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl font-medium text-[#633404]">
+              Tik Tok
+            </p>
+            <p className="font-semibold text-2xl md:text-3xl lg:text-2xl text-[#EF7F00] text-center">
+              petcafeoradea
+            </p>
           </div>
         </div>
 
+        {/* Cafe description */}
         <div className="mt-12">
           <h2
             className="text-justify leading-7 md:leading-relaxed lg:leading-9 sm:leading-6 text-lg 
@@ -78,6 +113,7 @@ function Contact() {
           </h2>
         </div>
 
+        {/* Google Maps iframe */}
         <div className="w-full mt-10 mb-10">
           <iframe
             className="w-full h-[500px]"

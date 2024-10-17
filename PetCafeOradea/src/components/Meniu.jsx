@@ -44,9 +44,9 @@ function Meniu() {
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-16
-                         lg:text-4xl lg:inset-16
-                         xl:text-4xl xl:inset-28"
+                    md:text-2xl md:inset-16
+                    lg:text-3xl lg:inset-5
+                    xl:text-3xl xl:inset-16"
               style={{ zIndex: 1 }}
             >
               Cafea de specialitate
@@ -100,9 +100,9 @@ function Meniu() {
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-16
-                         lg:text-4xl lg:inset-16
-                         xl:text-4xl xl:inset-28"
+                  md:text-2xl md:inset-16
+                  lg:text-3xl lg:inset-5
+                  xl:text-3xl xl:inset-16"
               style={{ zIndex: 1 }}
             >
               Ceai de specialitate
@@ -156,9 +156,9 @@ function Meniu() {
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-16
-                         lg:text-4xl lg:inset-16
-                         xl:text-4xl xl:inset-28"
+                  md:text-2xl md:inset-16
+                  lg:text-3xl lg:inset-5
+                  xl:text-3xl xl:inset-16"
               style={{ zIndex: 1 }}
             >
               Arome
@@ -212,9 +212,9 @@ function Meniu() {
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-16
-                         lg:text-4xl lg:inset-16
-                         xl:text-4xl xl:inset-28"
+                md:text-2xl md:inset-16
+                lg:text-3xl lg:inset-5
+                xl:text-3xl xl:inset-16"
               style={{ zIndex: 1 }}
             >
               Ice Tea
@@ -268,9 +268,9 @@ function Meniu() {
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-16
-                         lg:text-4xl lg:inset-16
-                         xl:text-4xl xl:inset-28"
+                md:text-2xl md:inset-16
+                lg:text-3xl lg:inset-5
+                xl:text-3xl xl:inset-16"
               style={{ zIndex: 1 }}
             >
               Răcoritoare
@@ -324,9 +324,9 @@ function Meniu() {
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-16
-                         lg:text-4xl lg:inset-16
-                         xl:text-4xl xl:inset-28"
+                md:text-2xl md:inset-16
+                lg:text-3xl lg:inset-5
+                xl:text-3xl xl:inset-16"
               style={{ zIndex: 1 }}
             >
               Limonadă
@@ -380,9 +380,9 @@ function Meniu() {
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-16
-                         lg:text-4xl lg:inset-16
-                         xl:text-4xl xl:inset-28"
+                md:text-2xl md:inset-16
+                lg:text-3xl lg:inset-5
+                xl:text-3xl xl:inset-16"
               style={{ zIndex: 1 }}
             >
               Ciocolată Caldă
@@ -436,9 +436,9 @@ function Meniu() {
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-16
-                         lg:text-4xl lg:inset-16
-                         xl:text-4xl xl:inset-28"
+                md:text-2xl md:inset-16
+                lg:text-3xl lg:inset-5
+                xl:text-3xl xl:inset-16"
               style={{ zIndex: 1 }}
             >
               Fresh
@@ -491,10 +491,10 @@ function Meniu() {
         <div className="relative flex flex-col p-4">
           <div className="relative flex justify-center items-center">
             <h1
-              className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-16
-                         lg:text-4xl lg:inset-16
-                         xl:text-4xl xl:inset-28"
+              className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4 
+                md:text-2xl md:inset-16
+                lg:text-3xl lg:inset-5
+                xl:text-3xl xl:inset-16"
               style={{ zIndex: 1 }}
             >
               Bere
@@ -548,9 +548,9 @@ function Meniu() {
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-16
-                         lg:text-4xl lg:inset-16
-                         xl:text-4xl xl:inset-28"
+                md:text-2xl md:inset-16
+                lg:text-3xl lg:inset-5
+                xl:text-3xl xl:inset-16"
               style={{ zIndex: 1 }}
             >
               Cocktails
@@ -604,9 +604,9 @@ function Meniu() {
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-16
-                         lg:text-4xl lg:inset-16
-                         xl:text-4xl xl:inset-28"
+                md:text-2xl md:inset-16
+                lg:text-3xl lg:inset-5
+                xl:text-3xl xl:inset-16"
               style={{ zIndex: 1 }}
             >
               Vin
@@ -660,9 +660,9 @@ function Meniu() {
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-16
-                         lg:text-4xl lg:inset-16
-                         xl:text-4xl xl:inset-28"
+                md:text-2xl md:inset-16
+                lg:text-3xl lg:inset-5
+                xl:text-3xl xl:inset-16"
               style={{ zIndex: 1 }}
             >
               Milkshake
@@ -716,9 +716,9 @@ function Meniu() {
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-16
-                         lg:text-4xl lg:inset-16
-                         xl:text-4xl xl:inset-28"
+                md:text-2xl md:inset-16
+                lg:text-3xl lg:inset-5
+                xl:text-3xl xl:inset-16"
               style={{ zIndex: 1 }}
             >
               Gustări
@@ -772,9 +772,9 @@ function Meniu() {
           <div className="relative flex justify-center items-center">
             <h1
               className="absolute inset-10 flex justify-center items-center text-2xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-4
-                         md:text-2xl md:inset-16
-                         lg:text-4xl lg:inset-16
-                         xl:text-4xl xl:inset-28"
+                md:text-2xl md:inset-16
+                lg:text-3xl lg:inset-5
+                xl:text-3xl xl:inset-16"
               style={{ zIndex: 1 }}
             >
               Extra

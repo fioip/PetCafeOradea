@@ -21,7 +21,6 @@ function Navbar() {
         <GiHamburgerMenu className="w-8 h-8" />
       </button>
 
-
       {/* Navbar */}
       <div
         className={`fixed top-0 left-0 h-screen w-full bg-[#633404] ${
@@ -29,7 +28,7 @@ function Navbar() {
         } md-relative md:flex md:flex-col md:w-1/4 md:translate-x-0 lg:w-1/4 xl:w-1/5 z-50`}
       >
         {/* Back Arrow Button */}
-      {open && (
+        {open && (
           <button
             className="text-[#FEF2DA] focus:outline-none md:hidden absolute top-4 left-4 z-50"
             onClick={Menu}
@@ -92,12 +91,11 @@ function Navbar() {
         </div>
 
         <p
-          className={`text-lg md:text-xl text-[#FEF2DA]/85 text-center italic ${
+          className={`text-3xl md:text-xl text-[#FEF2DA]/85 text-center italic ${
             open ? "absolute bottom-8 left-0 right-0" : "hidden"
           } md:block md:mt-auto md:mb-4`}
         >
-          Piața 1 Decembrie
-          <span className="flex flex-col">nr.12, Oradea</span>
+          ! NOT PET FRIENDLY !
         </p>
       </div>
     </div>
