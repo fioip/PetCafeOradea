@@ -18,6 +18,10 @@ export const Mira = [
       imgMira,
       imgMira,
       imgMira,
+      imgMira,
+      imgMira,
+      imgMira,
+      imgMira,
     ],
   },
 ];
@@ -67,9 +71,9 @@ export const Ash = [
   },
 ];
 
-export const Pisu1 = [
+export const Plawan = [
   {
-    animalTitle: "Pisu1",
+    animalTitle: "Plawan",
     imgURL: "/path/to/mira.jpg",
     smallText: "Această pisică adoră să fie în centrul atenției și să primească alinturi. Se va așeza lângă tine pe canapea...",
     denumire:
@@ -82,9 +86,9 @@ export const Pisu1 = [
   },
 ];
 
-export const Pisu2 = [
+export const Baghera = [
   {
-    animalTitle: "Pisu2",
+    animalTitle: "Baghera",
     imgURL: "/path/to/mira.jpg",
     smallText: "Această pisică adoră să fie în centrul atenției și să primească alinturi. Se va așeza lângă tine pe canapea...",
     denumire:

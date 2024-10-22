@@ -47,13 +47,15 @@ function Navbar() {
         >
           <ul
             className={`flex flex-col gap-12 md:gap-28 lg:gap-14 justify-center items-center ${
-              open ? "-mt-72 text-3xl md:text-4xl gap-20" : "text-3xl"
+              open
+                ? "-mt-72 text-3xl md:text-4xl gap-20"
+                : "text-3xl lg:gap-32 xl:gap-14"
             }`}
           >
             <li>
               <Link
                 to="/"
-                className="bg hover:underline lg:text-2xl "
+                className="bg hover:underline lg:text-4xl xl:text-2xl "
                 onClick={() => setOpen(false)}
               >
                 Home
@@ -62,7 +64,7 @@ function Navbar() {
             <li>
               <Link
                 to="/meniu"
-                className="hover:underline lg:text-2xl"
+                className="hover:underline lg:text-4xl xl:text-2xl"
                 onClick={() => setOpen(false)}
               >
                 Meniu
@@ -72,7 +74,7 @@ function Navbar() {
               <Link
                 to="/galerie"
                 href="#"
-                className="hover:underline lg:text-2xl"
+                className="hover:underline lg:text-4xl xl:text-2xl"
                 onClick={() => setOpen(false)}
               >
                 Galerie
@@ -81,7 +83,7 @@ function Navbar() {
             <li>
               <Link
                 to="/contact"
-                className="hover:underline lg:text-2xl"
+                className="hover:underline lg:text-4xl xl:text-2xl"
                 onClick={() => setOpen(false)}
               >
                 Contact
@@ -91,11 +93,15 @@ function Navbar() {
         </div>
 
         <p
-          className={`text-3xl md:text-xl text-[#FEF2DA]/85 text-center italic ${
+          className={`flex text-3xl md:text-xl text-[#FEF2DA]/85 text-center italic ${
             open ? "absolute bottom-8 left-0 right-0" : "hidden"
-          } md:block md:mt-auto md:mb-4`}
+          } md:block md:mt-auto md:mb-4 justify-center items-center`}
         >
-          ! NOT PET FRIENDLY !
+          <span className="inline md:hidden lg:inline">
+            ! NOT PET FRIENDLY !
+          </span>
+          <span className="hidden md:inline lg:hidden">! NOT PET</span>
+          <span className="hidden md:block lg:hidden">FRIENDLY !</span>
         </p>
       </div>
     </div>

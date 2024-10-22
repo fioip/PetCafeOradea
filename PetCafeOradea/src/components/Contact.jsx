@@ -9,74 +9,74 @@ import { FaTiktok } from "react-icons/fa";
 
 function Contact() {
   return (
-    <div className="md:ml-[15%] lg:ml-[10%] xl:ml-[10%] h-screen">
+    <div className="md:ml-[25%] lg:ml-[25%] xl:ml-[20%] h-full">
       <div className="bg-[#FFF8EA]">
         <Banner />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center items-center mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 lg:gap-14 justify-center items-start mt-16">
           {/* Phone Section */}
-          <div className="flex flex-col justify-center items-center space-y-4">
-            <FaPhone className="text-[#633404] text-6xl" />
-            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl font-medium text-[#633404]">
+          <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
+            <FaPhone className="text-[#633404] text-6xl lg:text-7xl" />
+            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
               Telefon
             </p>
-            <p className="font-semibold text-2xl md:text-3xl lg:text-2xl text-[#EF7F00]">
+            <p className="font-semibold text-2xl md:text-2xl lg:text-2xl xl:text-4xl text-[#EF7F00]">
               0712 123 123
             </p>
           </div>
 
           {/* Email Section */}
-          <div className="flex flex-col justify-center items-center space-y-4">
-            <IoMdMail className="text-[#633404] text-6xl" />
-            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl font-medium text-[#633404]">
+          <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
+            <IoMdMail className="text-[#633404] text-6xl lg:text-7xl" />
+            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
               Mail
             </p>
-            <p className="font-semibold text-2xl md:text-3xl lg:text-2xl text-[#EF7F00]">
+            <p className="font-semibold text-2xl md:text-2xl lg:text-2xl xl:text-4xl text-[#EF7F00]">
               pet.cafe@yahoo.com
             </p>
           </div>
 
           {/* Location Section */}
-          <div className="flex flex-col justify-center items-center space-y-4">
-            <FaLocationDot className="text-[#633404] text-6xl" />
-            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl font-medium text-[#633404]">
+          <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
+            <FaLocationDot className="text-[#633404] text-6xl lg:text-7xl" />
+            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
               Locație
             </p>
-            <p className="font-semibold text-2xl md:text-3xl lg:text-2xl text-[#EF7F00] flex flex-col text-center">
+            <p className="font-semibold text-2xl md:text-2xl lg:text-2xl xl:text-4xl text-[#EF7F00] flex flex-col text-center">
               Piața 1 Decembrie
               <span>Nr. 12, Oradea</span>
             </p>
           </div>
 
           {/* Instagram Section */}
-          <div className="flex flex-col justify-center items-center space-y-4">
-            <FaInstagram className="text-[#633404] text-6xl" />
-            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl font-medium text-[#633404]">
+          <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
+            <FaInstagram className="text-[#633404] text-6xl lg:text-7xl" />
+            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
               Instagram
             </p>
-            <p className="font-semibold text-2xl md:text-3xl lg:text-2xl text-[#EF7F00] text-center">
+            <p className="font-semibold text-2xl md:text-2xl lg:text-2xl xl:text-4xl text-[#EF7F00] text-center">
               petcafeoradea
             </p>
           </div>
 
           {/* Facebook Section */}
-          <div className="flex flex-col justify-center items-center space-y-4">
-            <FaFacebook className="text-[#633404] text-6xl" />
-            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl font-medium text-[#633404]">
+          <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
+            <FaFacebook className="text-[#633404] text-6xl lg:text-7xl" />
+            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
               Facebook
             </p>
-            <p className="font-semibold text-2xl md:text-3xl lg:text-2xl text-[#EF7F00] text-center">
+            <p className="font-semibold text-2xl md:text-2xl lg:text-2xl xl:text-4xl text-[#EF7F00] text-center">
               Pet Cafe Oradea
             </p>
           </div>
 
           {/* Tik Tok Section */}
-          <div className="flex flex-col justify-center items-center space-y-4">
-            <FaTiktok className="text-[#633404] text-6xl" />
-            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl font-medium text-[#633404]">
+          <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
+            <FaTiktok className="text-[#633404] text-6xl lg:text-7xl" />
+            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
               Tik Tok
             </p>
-            <p className="font-semibold text-2xl md:text-3xl lg:text-2xl text-[#EF7F00] text-center">
+            <p className="font-semibold text-2xl md:text-2xl lg:text-2xl xl:text-4xl text-[#EF7F00] text-center">
               petcafeoradea
             </p>
           </div>
@@ -114,11 +114,17 @@ function Contact() {
         </div>
 
         {/* Google Maps iframe */}
-        <div className="w-full mt-10 mb-10">
-          <iframe
-            className="w-full h-[500px]"
-            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Pet%20Cafe,%20Oradea,%20%20Bihor+(Pet%20Cafe)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-          ></iframe>
+        <div className="w-full mt-10 mb-10 flex justify-center px-4 md:px-8 lg:px-0">
+          <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+            <iframe
+              className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-lg"
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Pet%20Cafe,%20Oradea,%20%20Bihor+(Pet%20Cafe)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
 
         <Footer />

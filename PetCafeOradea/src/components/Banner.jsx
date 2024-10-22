@@ -90,7 +90,7 @@ function Banner() {
       <img
         src={imgURL}
         alt="Banner"
-        className="absolute top-0 left-0 w-full h-full object-cover scale-x-[-1] lg:w-1/2"
+        className="absolute top-0 left-0 w-full h-full object-cover scale-x-[-1] xl:w-1/2"
       />
       <div className="absolute inset-0 flex items-center justify-center">
         <div
@@ -117,33 +117,33 @@ function Banner() {
             </div>
           </div>
           <div className="flex flex-1 items-center justify-center ">
-            <h2 className="text-4xl text-center leading-[50px]">{motto}</h2>
+            <h2 className="text-4xl lg:text-5xl xl:text-4xl text-center leading-[50px] lg:leading-[70px] xl:leading-[50px]">{motto}</h2>
           </div>
 
           <div className="flex flex-row justify-center items-center">
             <div className="text-center mt-auto mb-[20px] mr-20">
               {/* Afișare pe desktop-uri */}
-              <h2 className="text-2xl hidden lg:block">{days}</h2>
-              <h2 className="text-2xl hidden lg:block">{hours}</h2>
+              <h2 className="text-2xl hidden xl:block">{days}</h2>
+              <h2 className="text-2xl hidden xl:block">{hours}</h2>
 
               {/* Afișare pe tablete mari */}
-              <div className="hidden md:flex md:flex-col md:items-center lg:hidden">
-                <h2 className="text-2xl">
+              <div className="hidden md:flex md:flex-col md:items-center xl:hidden lg:gap-3 xl:gap-0">
+                <h2 className="text-2xl lg:text-3xl xl:text-2xl">
                   {days
                     .split(" ")
                     .map((day) => day[0])
                     .join(" ")}
                 </h2>
-                <div className="text-2xl flex flex-col items-center">
-                  <h2 className="text-xl">07:00</h2>
-                  <span className="text-xl">-</span>
-                  <h2 className="text-xl">21:30</h2>
+                <div className="text-2xl flex flex-col items-center ">
+                  <h2 className="text-xl lg:text-3xl xl:text-xl">07:00</h2>
+                  <span className="text-xl lg:text-3xl xl:text-xl">-</span>
+                  <h2 className="text-xl lg:text-3xl xl:text-xl">21:30</h2>
                 </div>
               </div>
 
               {/* Afișare pe mobile */}
-              <div className="lg:hidden md:hidden flex flex-col items-center">
-                <h2 className="text-2xl">
+              <div className="xl:hidden md:hidden flex flex-col items-center">
+                <h2 className="text-2xl ">
                   {days
                     .split(" ")
                     .map((day) => day[0])
@@ -155,26 +155,26 @@ function Banner() {
 
             <div className="text-center mt-auto mb-[20px]">
               {/* Afișare pe desktop-uri */}
-              <h2 className="text-2xl hidden lg:block">{weekendDays}</h2>
-              <h2 className="text-2xl hidden lg:block">{weekendHours}</h2>
+              <h2 className="text-2xl hidden xl:block">{weekendDays}</h2>
+              <h2 className="text-2xl hidden xl:block">{weekendHours}</h2>
 
               {/* Afișare pe tablete mari */}
-              <div className="hidden md:flex md:flex-col md:items-center lg:hidden">
-                <h2 className="text-2xl">
+              <div className="hidden md:flex md:flex-col md:items-center xl:hidden lg:gap-3 xl:gap-0">
+                <h2 className="text-2xl lg:text-3xl xl:text-xl">
                   {weekendDays
                     .split(" ")
                     .map((day) => day[0])
                     .join(" ")}
                 </h2>
                 <div className="text-2xl flex flex-col items-center">
-                  <h2 className="text-xl">10:00</h2>
-                  <span className="text-xl">-</span>
-                  <h2 className="text-xl">21:30</h2>
+                  <h2 className="text-xl lg:text-3xl xl:text-xl">10:00</h2>
+                  <span className="text-xl lg:text-3xl xl:text-xl">-</span>
+                  <h2 className="text-xl lg:text-3xl xl:text-xl">21:30</h2>
                 </div>
               </div>
 
               {/* Afișare pe mobile */}
-              <div className="lg:hidden md:hidden flex flex-col items-center">
+              <div className="xl:hidden md:hidden flex flex-col items-center">
                 <h2 className="text-2xl">
                   {weekendDays
                     .split(" ")
