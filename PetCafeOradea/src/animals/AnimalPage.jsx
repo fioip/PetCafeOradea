@@ -198,6 +198,8 @@ const AnimalPage = () => {
         </div>
       </div>
 
+      
+
       {/* Lightbox pentru vizualizarea imaginii mari */}
       {lightboxOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex justify-center items-center">
