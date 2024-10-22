@@ -90,7 +90,7 @@ function Banner() {
       <img
         src={imgURL}
         alt="Banner"
-        className="absolute top-0 left-0 w-full h-full object-cover scale-x-[-1] lg:w-1/2"
+        className="absolute top-0 left-0 w-full h-full object-cover scale-x-[-1] xl:w-1/2"
       />
       <div className="absolute inset-0 flex items-center justify-center">
         <div
@@ -98,34 +98,91 @@ function Banner() {
            lg:backdrop-blur-lg lg:shadow-2xl"
           style={{ textShadow: "4px 4px 9px rgba(0, 0, 0, 1)" }}
         >
-          <h1 className="text-5xl font-bold text-center mt-[40px] sm:mt-[60px]">
-            {title}
-          </h1>
-          <div className="flex flex-row justify-center items-center gap-4 mt-8">
-            <PiPawPrintFill
-              className="text-6xl sm:text-6xl md:text-4xl lg:text-6xl text-[#EF7F00]"
-              style={{ transform: "rotate(340deg)" }}
-            />
-            <h1 className="text-5xl sm:text-5xl md:text-4xl lg:text-6xl font-bold text-center">
-              {cafe}
+          <div className="mt-12 md:-mt-8">
+            <h1 className="text-5xl md:text-4xl lg:text-5xl font-bold text-center mt-[40px] sm:mt-[60px]">
+              {title}
             </h1>
-            <PiPawPrintFill
-              className="text-6xl sm:text-6xl md:text-4xl lg:text-6xl text-[#EF7F00]"
-              style={{ transform: "rotate(20deg)" }}
-            />
+            <div className="flex flex-row justify-center items-center gap-4 mt-8">
+              <PiPawPrintFill
+                className="text-5xl sm:text-4xl md:text-4xl lg:text-6xl text-[#EF7F00]"
+                style={{ transform: "rotate(340deg)" }}
+              />
+              <h1 className="text-[40px] sm:text-4xl md:text-[33px] lg:text-6xl font-bold text-center">
+                {cafe}
+              </h1>
+              <PiPawPrintFill
+                className="text-5xl sm:text-6xl md:text-4xl lg:text-6xl text-[#EF7F00]"
+                style={{ transform: "rotate(20deg)" }}
+              />
+            </div>
           </div>
-          <div className="flex flex-1 items-center justify-center">
-            <h2 className="text-4xl text-center leading-[50px]">{motto}</h2>
+          <div className="flex flex-1 items-center justify-center ">
+            <h2 className="text-4xl lg:text-5xl xl:text-4xl text-center leading-[50px] lg:leading-[70px] xl:leading-[50px]">{motto}</h2>
           </div>
 
           <div className="flex flex-row justify-center items-center">
             <div className="text-center mt-auto mb-[20px] mr-20">
-              <h2 className="text-2xl">{days}</h2>
-              <h2 className="text-2xl">{hours}</h2>
+              {/* Afișare pe desktop-uri */}
+              <h2 className="text-2xl hidden xl:block">{days}</h2>
+              <h2 className="text-2xl hidden xl:block">{hours}</h2>
+
+              {/* Afișare pe tablete mari */}
+              <div className="hidden md:flex md:flex-col md:items-center xl:hidden lg:gap-3 xl:gap-0">
+                <h2 className="text-2xl lg:text-3xl xl:text-2xl">
+                  {days
+                    .split(" ")
+                    .map((day) => day[0])
+                    .join(" ")}
+                </h2>
+                <div className="text-2xl flex flex-col items-center ">
+                  <h2 className="text-xl lg:text-3xl xl:text-xl">07:00</h2>
+                  <span className="text-xl lg:text-3xl xl:text-xl">-</span>
+                  <h2 className="text-xl lg:text-3xl xl:text-xl">21:30</h2>
+                </div>
+              </div>
+
+              {/* Afișare pe mobile */}
+              <div className="xl:hidden md:hidden flex flex-col items-center">
+                <h2 className="text-2xl ">
+                  {days
+                    .split(" ")
+                    .map((day) => day[0])
+                    .join("  ")}
+                </h2>
+                <h2 className="text-[18px]">{hours}</h2>
+              </div>
             </div>
+
             <div className="text-center mt-auto mb-[20px]">
-              <h2 className="text-2xl">{weekendDays}</h2>
-              <h2 className="text-2xl">{weekendHours}</h2>
+              {/* Afișare pe desktop-uri */}
+              <h2 className="text-2xl hidden xl:block">{weekendDays}</h2>
+              <h2 className="text-2xl hidden xl:block">{weekendHours}</h2>
+
+              {/* Afișare pe tablete mari */}
+              <div className="hidden md:flex md:flex-col md:items-center xl:hidden lg:gap-3 xl:gap-0">
+                <h2 className="text-2xl lg:text-3xl xl:text-xl">
+                  {weekendDays
+                    .split(" ")
+                    .map((day) => day[0])
+                    .join(" ")}
+                </h2>
+                <div className="text-2xl flex flex-col items-center">
+                  <h2 className="text-xl lg:text-3xl xl:text-xl">10:00</h2>
+                  <span className="text-xl lg:text-3xl xl:text-xl">-</span>
+                  <h2 className="text-xl lg:text-3xl xl:text-xl">21:30</h2>
+                </div>
+              </div>
+
+              {/* Afișare pe mobile */}
+              <div className="xl:hidden md:hidden flex flex-col items-center">
+                <h2 className="text-2xl">
+                  {weekendDays
+                    .split(" ")
+                    .map((day) => day[0])
+                    .join("  ")}
+                </h2>
+                <h2 className="text-[18px]">{weekendHours}</h2>
+              </div>
             </div>
           </div>
         </div>
