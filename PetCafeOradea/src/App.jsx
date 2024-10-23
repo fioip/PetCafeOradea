@@ -6,12 +6,14 @@ import Meniu from "./components/Meniu";
 import Navbar from "./components/Navbar";
 import Mira from "./animals/mira";
 import AnimalPage from "./animals/AnimalPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <div className="flex h-screen">
       <Navbar />
       <div className="flex-1 flex flex-col overflow-auto">
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/meniu" element={<Meniu />} />
