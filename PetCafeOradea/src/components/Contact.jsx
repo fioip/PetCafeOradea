@@ -6,6 +6,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Contact() {
   return (
@@ -13,72 +14,91 @@ function Contact() {
       <div className="bg-[#FFF8EA]">
         <Banner />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 lg:gap-14 justify-center items-start mt-16">
-          {/* Phone Section */}
-          <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
-            <FaPhone className="text-[#633404] text-6xl lg:text-7xl" />
-            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
-              Telefon
-            </p>
-            <p className="font-semibold text-2xl md:text-2xl lg:text-2xl xl:text-4xl text-[#EF7F00]">
-              0712 123 123
-            </p>
-          </div>
+        <div className="flex flex-col items-center">
+          <div className="bg-white shadow-2xl rounded-3xl p-6 w-full max-w-4xl relative overflow-hidden lg:max-w-5xl xl:max-w-6xl mt-10 flex justify-center items-center ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 lg:gap-14 justify-center items-start mt-16">
+              {/* Phone Section */}
+              <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
+                <FaPhone className="text-[#633404] text-6xl lg:text-7xl" />
+                <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
+                  Telefon
+                </p>
+                <p className="font-semibold text-2xl md:text-2xl lg:text-2xl xl:text-3xl text-[#EF7F00]">
+                  0712 123 123
+                </p>
+              </div>
 
-          {/* Email Section */}
-          <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
-            <IoMdMail className="text-[#633404] text-6xl lg:text-7xl" />
-            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
-              Mail
-            </p>
-            <p className="font-semibold text-2xl md:text-2xl lg:text-2xl xl:text-4xl text-[#EF7F00]">
-              pet.cafe@yahoo.com
-            </p>
-          </div>
+              {/* Email Section */}
+              <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
+                <IoMdMail className="text-[#633404] text-6xl lg:text-7xl" />
+                <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
+                  Mail
+                </p>
+                <p className="font-semibold text-2xl md:text-[23px] lg:text-2xl xl:text-3xl text-[#EF7F00]">
+                  pet.cafe@yahoo.com
+                </p>
+              </div>
 
-          {/* Location Section */}
-          <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
-            <FaLocationDot className="text-[#633404] text-6xl lg:text-7xl" />
-            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
-              Locație
-            </p>
-            <p className="font-semibold text-2xl md:text-2xl lg:text-2xl xl:text-4xl text-[#EF7F00] flex flex-col text-center">
-              Piața 1 Decembrie
-              <span>Nr. 12, Oradea</span>
-            </p>
-          </div>
+              {/* Location Section */}
+              <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
+                <FaLocationDot className="text-[#633404] text-6xl lg:text-7xl" />
+                <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
+                  Locație
+                </p>
+                <p className="font-semibold text-2xl md:text-2xl lg:text-2xl xl:text-3xl text-[#EF7F00] flex flex-col text-center">
+                  Piața 1 Decembrie
+                  <span>Nr. 12, Oradea</span>
+                </p>
+              </div>
 
-          {/* Instagram Section */}
-          <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
-            <FaInstagram className="text-[#633404] text-6xl lg:text-7xl" />
-            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
-              Instagram
-            </p>
-            <p className="font-semibold text-2xl md:text-2xl lg:text-2xl xl:text-4xl text-[#EF7F00] text-center">
-              petcafeoradea
-            </p>
-          </div>
+              {/* Instagram Section */}
+              <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
+                <FaInstagram className="text-[#633404] text-6xl lg:text-7xl" />
+                <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
+                  Instagram
+                </p>
+                <Link
+                  to={`https://www.instagram.com/petcafeoradea/`}
+                  target="_blank"
+                >
+                  <p className="font-semibold underline text-2xl md:text-2xl lg:text-2xl xl:text-3xl text-[#EF7F00] text-center hover:transition-transform transform hover:scale-110 hover:no-underline hover:cursor-pointer">
+                    petcafeoradea
+                  </p>
+                </Link>
+              </div>
 
-          {/* Facebook Section */}
-          <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
-            <FaFacebook className="text-[#633404] text-6xl lg:text-7xl" />
-            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
-              Facebook
-            </p>
-            <p className="font-semibold text-2xl md:text-2xl lg:text-2xl xl:text-4xl text-[#EF7F00] text-center">
-              Pet Cafe Oradea
-            </p>
-          </div>
+              {/* Facebook Section */}
+              <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
+                <FaFacebook className="text-[#633404] text-6xl lg:text-7xl" />
+                <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
+                  Facebook
+                </p>
+                <Link
+                  to={`https://www.facebook.com/profile.php?id=61561317749365`}
+                  target="_blank"
+                >
+                  <p className="font-semibold underline text-2xl md:text-2xl lg:text-2xl xl:text-3xl text-[#EF7F00] text-center hover:transition-transform transform hover:scale-110 hover:no-underline hover:cursor-pointer">
+                    Pet Cafe Oradea
+                  </p>
+                </Link>
+              </div>
 
-          {/* Tik Tok Section */}
-          <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
-            <FaTiktok className="text-[#633404] text-6xl lg:text-7xl" />
-            <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
-              Tik Tok
-            </p>
-            <p className="font-semibold text-2xl md:text-2xl lg:text-2xl xl:text-4xl text-[#EF7F00] text-center">
-              petcafeoradea
-            </p>
+              {/* Tik Tok Section */}
+              <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6">
+                <FaTiktok className="text-[#633404] text-6xl lg:text-7xl" />
+                <p className="border-b-4 border-[#EF7F00] pb-4 md:text-3xl text-2xl lg:text-3xl xl:text-4xl font-medium text-[#633404]">
+                  Tik Tok
+                </p>
+                <Link
+                  to={`https://www.tiktok.com/@petcafeoradea`}
+                  target="_blank"
+                >
+                  <p className="font-semibold underline text-2xl md:text-2xl lg:text-2xl xl:text-3xl text-[#EF7F00] text-center hover:transition-transform transform hover:scale-110 hover:no-underline hover:cursor-pointer">
+                    petcafeoradea
+                  </p>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
 

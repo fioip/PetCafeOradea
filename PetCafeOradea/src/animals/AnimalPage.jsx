@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import {
   FaPaw,
   FaInfoCircle,
@@ -23,6 +23,7 @@ import Footer from "../components/Footer";
 
 const AnimalPage = () => {
   const { animal } = useParams();
+  const [isVisible, setIsVisible] = useState(false);
 
   // Obiect pentru stocarea datelor animalelor
   const animalsData = {
@@ -103,6 +104,17 @@ const AnimalPage = () => {
             <div className="flex flex-col justify-between">
               <div className="text-left">
                 {/* Titlu - AnimalTitle */}
+                <Link to={`/galerie`}>
+                  <button
+                    onClick={handlePrevClick}
+                    className="bg-[#EF7F00] text-white p-3 rounded-full shadow-md hover:bg-[#ffd684] transition-transform transform hover:scale-110"
+                  >
+                    <div className="flex flex-row justify-center items-center">
+                      <FaArrowLeft />
+                      <h1 className="text-xl ml-2">Galerie</h1>
+                    </div>
+                  </button>
+                </Link>
                 <h1 className="text-3xl font-bold text-[#EF7F00] mb-12 mt-10 justify-center flex items-center lg:text-5xl">
                   <FaPaw className="text-[#EF7F00] mr-2" />
                   {selectedAnimal.animalTitle}
@@ -110,7 +122,6 @@ const AnimalPage = () => {
 
                 {/* Denumire */}
                 <p className="text-xl text-[#633404] text-justify mb-4 font-medium flex items-center gap-3 lg:text-2xl">
-                  <FaInfoCircle className="text-[#633404] mr-2" />
                   {selectedAnimal.denumire}
                 </p>
 
@@ -125,7 +136,7 @@ const AnimalPage = () => {
             </div>
 
             {/* Carusel */}
-            <div className="relative flex flex-col items-center">
+            <div className="relative flex flex-col items-center justify-center">
               <div className="relative">
                 {/* Imagine principală */}
                 <img
@@ -197,8 +208,6 @@ const AnimalPage = () => {
           </div>
         </div>
       </div>
-
-      
 
       {/* Lightbox pentru vizualizarea imaginii mari */}
       {lightboxOpen && (
