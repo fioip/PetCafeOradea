@@ -5,6 +5,7 @@ import { IoRemoveOutline } from "react-icons/io5";
 import Footer from "./Footer";
 import { Animals } from "../constants/AnimalsHomePage.jsx";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar.jsx";
 
 function Home() {
   return (
@@ -13,7 +14,7 @@ function Home() {
         <Banner />
 
         {/* Despre noi component */}
-        <div className="mt-12 mx-6 md:mt-16 lg:mt-20 lg:ml-20 ">
+        <div className="mt-20 mx-6 md:mt-16 lg:mt-20 lg:ml-20 z-50">
           <div className="flex flex-col items-center md:items-center">
             <div className="flex flex-col items-center justify-center md:justify-items-center xl:-ml-16 lg:-ml-14">
               <h1 className="text-4xl md:text-4xl font-bold text-[#633404] text-center ">
@@ -74,26 +75,28 @@ function Home() {
             {/* Afisarea animalelor pe rand care au fost salvate intr-o constanta */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-x-24 md:gap-x-16 lg:gap-x-28 xl:gap-x-16 gap-y-8 md:gap-y-12 justify-items-center mx-auto mt-10 max-w-screen-xl px-4 lg:px-8">
               {Animals.map((animal, index) => (
-                <div key={index} className="flex flex-col items-center group">
-                  <div
-                    className="relative w-32 h-32 lg:w-48 lg:h-48 rounded-full overflow-hidden 
-                  transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 
-                  group-hover:shadow-2xl group-hover:shadow-[#FFF8EA]"
-                  >
-                    <img
-                      src={animal.imagine}
-                      alt={animal.denumire}
-                      className="w-full h-full object-cover rounded-full transition-transform 
-                      duration-700 ease-out group-hover:scale-125 group-hover:rotate-6"
-                    />
+                <Link to={`/animal/${animal?.denumire?.toLowerCase() || ''}`} key={index}>
+                  <div key={index} className="flex flex-col items-center group">
+                    <div
+                      className="relative w-32 h-32 lg:w-48 lg:h-48 rounded-full overflow-hidden 
+                    transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 
+                    group-hover:shadow-2xl group-hover:shadow-[#FFF8EA]"
+                    >
+                      <img
+                        src={animal.imagine}
+                        alt={animal.denumire}
+                        className="w-full h-full object-cover rounded-full transition-transform 
+                        duration-700 ease-out group-hover:scale-125 group-hover:rotate-6"
+                      />
+                    </div>
+                    <h2
+                      className="mt-2 mb-6 text-xl lg:text-2xl font-semibold transition-transform 
+                    duration-300 ease-in-out group-hover:scale-110 group-hover:text-[#633404]"
+                    >
+                      {animal.denumire}
+                    </h2>
                   </div>
-                  <h2
-                    className="mt-2 mb-6 text-xl lg:text-2xl font-semibold transition-transform 
-                  duration-300 ease-in-out group-hover:scale-110 group-hover:text-[#633404]"
-                  >
-                    {animal.denumire}
-                  </h2>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

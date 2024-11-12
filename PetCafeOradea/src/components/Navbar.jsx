@@ -1,111 +1,99 @@
-import { Link } from "react-router-dom";
-import logo from "../assets/PetCafeLogo.png";
-import { useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { IoClose } from "react-icons/io5";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoClose } from 'react-icons/io5';
+import Logo from "../assets/PetCafeLogo.png"
 
-function Navbar() {
+const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-  const Menu = () => {
-    setOpen(!open);
-  };
+  useEffect(() => {
+    const controlNavbar = () => {
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', controlNavbar);
+
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY]);
 
   return (
-    <div>
-      {/* Hamburger Meniu */}
-      <button
-        className="text-[#FEF2DA] focus:outline-none md:hidden absolute top-4 left-4 z-50"
-        onClick={Menu}
-      >
-        <GiHamburgerMenu className="w-8 h-8" />
-      </button>
-
-      {/* Navbar */}
-      <div
-        className={`fixed top-0 left-0 h-screen w-full bg-[#633404] ${
-          open ? "translate-x-0" : "-translate-x-full"
-        } md-relative md:flex md:flex-col md:w-1/4 md:translate-x-0 lg:w-1/4 xl:w-1/5 z-50`}
-      >
-        {/* Back Arrow Button */}
-        {open && (
-          <button
-            className="text-[#FEF2DA] focus:outline-none md:hidden absolute top-4 left-4 z-50"
-            onClick={Menu}
-          >
-            <IoClose className="w-10 h-10" />
-          </button>
-        )}
-        <div className="flex justify-center items-center mt-9">
-          <img src={logo} alt="logo" className="w-24 h-24 md:w-40 md:h-40" />
-        </div>
-
-        <div
-          className={`flex flex-col justify-center text-[#FEF2DA] ${
-            open ? "mt-10 mb-20" : "-mt-3 mb-0"
-          } h-full`}
-        >
-          <ul
-            className={`flex flex-col gap-12 md:gap-28 lg:gap-14 justify-center items-center ${
-              open
-                ? "-mt-72 text-3xl md:text-4xl gap-20"
-                : "text-3xl lg:gap-32 xl:gap-14"
-            }`}
-          >
-            <li>
-              <Link
-                to="/"
-                className="bg hover:underline lg:text-4xl xl:text-2xl "
-                onClick={() => setOpen(false)}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/meniu"
-                className="hover:underline lg:text-4xl xl:text-2xl"
-                onClick={() => setOpen(false)}
-              >
-                Meniu
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/galerie"
-                href="#"
-                className="hover:underline lg:text-4xl xl:text-2xl"
-                onClick={() => setOpen(false)}
-              >
-                Galerie
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contact"
-                className="hover:underline lg:text-4xl xl:text-2xl"
-                onClick={() => setOpen(false)}
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <p
-          className={`flex text-3xl md:text-xl text-[#FEF2DA]/85 text-center italic ${
-            open ? "absolute bottom-8 left-0 right-0" : "hidden"
-          } md:block md:mt-auto md:mb-4 justify-center items-center`}
-        >
-          <span className="inline md:hidden lg:inline">
+    <nav className="fixed w-full z-50 transition-all duration-300">
+      {/* Desktop and Tablet Navbar */}
+      <div className="hidden sm:flex flex-col fixed left-0 min-h-screen md:w-[192px] lg:w-[304px] bg-[#633404] text-white">
+        <div className="flex flex-col items-center justify-between h-full py-16">
+          {/* Top section with logo */}
+          <div className="flex justify-center w-full mb-20">
+            <img src={Logo} alt="Pet Cafe Logo" className="w- h-36 rounded-full bg-[#FFF6E9]" />
+          </div>
+          
+          {/* Middle section with navigation */}
+          <div className="flex flex-col space-y-12 text-2xl text-center flex-grow justify-center">
+            <Link to="/" className="hover:text-orange-300 transition-colors px-8 py-2">
+              Home
+            </Link>
+            <Link to="/meniu" className="hover:text-orange-300 transition-colors px-8 py-2">
+              Meniu
+            </Link>
+            <Link to="/galerie" className="hover:text-orange-300 transition-colors px-8 py-2">
+              Galerie
+            </Link>
+            <Link to="/contact" className="hover:text-orange-300 transition-colors px-8 py-2">
+              Contact
+            </Link>
+          </div>
+          
+          {/* Bottom section with warning */}
+          <div className="text-base italic text-red-400 mt-auto">
             ! NOT PET FRIENDLY !
-          </span>
-          <span className="hidden md:inline lg:hidden">! NOT PET</span>
-          <span className="hidden md:block lg:hidden">FRIENDLY !</span>
-        </p>
+          </div>
+        </div>
       </div>
-    </div>
+
+      {/* Mobile Navbar (only for very small screens) */}
+      <div className={`sm:hidden ${showNavbar ? 'translate-y-0' : '-translate-y-full'} transition-transform duration-300`}>
+        <div className="flex justify-between items-center bg-[#633404] p-4">
+          <img src={Logo} alt="Pet Cafe Logo" className="w-12 h-12 rounded-full bg-[#FFF6E9]" />
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-white text-2xl focus:outline-none"
+          >
+            {open ? <IoClose /> : <GiHamburgerMenu />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className={`absolute w-full bg-[#633404] transition-transform duration-300 ${open ? 'translate-x-0' : '-translate-x-full'}`}>
+          <div className="flex flex-col items-center space-y-6 p-8 text-white">
+            <Link to="/" onClick={() => setOpen(false)} className="hover:text-orange-300 transition-colors text-xl">
+              Home
+            </Link>
+            <Link to="/meniu" onClick={() => setOpen(false)} className="hover:text-orange-300 transition-colors text-xl">
+              Meniu
+            </Link>
+            <Link to="/galerie" onClick={() => setOpen(false)} className="hover:text-orange-300 transition-colors text-xl">
+              Galerie
+            </Link>
+            <Link to="/contact" onClick={() => setOpen(false)} className="hover:text-orange-300 transition-colors text-xl">
+              Contact
+            </Link>
+            <div className="text-sm italic text-red-400 pt-4">
+              ! NOT PET FRIENDLY !
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
-}
+};
 
 export default Navbar;

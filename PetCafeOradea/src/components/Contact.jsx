@@ -14,7 +14,7 @@ function Contact() {
       <div className="bg-[#FFF8EA]">
         <Banner />
 
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center mt-20">
           <div className="bg-white shadow-2xl rounded-3xl p-6 w-full max-w-4xl relative overflow-hidden lg:max-w-5xl xl:max-w-6xl mt-10 flex justify-center items-center ">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 lg:gap-14 justify-center items-start mt-16">
               {/* Phone Section */}
@@ -135,7 +135,7 @@ function Contact() {
 
         {/* Google Maps iframe */}
         <div className="w-full mt-10 mb-10 flex justify-center px-4 md:px-8 lg:px-0">
-          <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 mb-20">
             <iframe
               className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-lg"
               src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Pet%20Cafe,%20Oradea,%20%20Bihor+(Pet%20Cafe)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
