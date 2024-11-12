@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import {
-  FaPaw,
-  FaInfoCircle,
-  FaArrowLeft,
-  FaArrowRight,
-  FaTimes,
-} from "react-icons/fa";
+import { FaPaw, FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
 import {
   Mira,
   Kira,
@@ -20,6 +14,7 @@ import {
   Winnie,
 } from "../constants/AnimalDescription";
 import Footer from "../components/Footer";
+import ScrollToTopButton from "./TopPageButton";
 
 const AnimalPage = () => {
   const { animal } = useParams();
@@ -91,6 +86,18 @@ const AnimalPage = () => {
     setLightboxOpen(false);
     setLightboxImage("");
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="md:ml-[25%] lg:ml-[25%] xl:ml-[20%] h-full">
@@ -227,6 +234,10 @@ const AnimalPage = () => {
           </div>
         </div>
       )}
+
+      {/* Include butonul TopPage */}
+      <ScrollToTopButton isVisible={isVisible} />
+
       <Footer />
     </div>
   );

@@ -13,14 +13,14 @@ function Footer() {
         <div className="flex flex-col justify-center items-center space-y-2 md:space-y-1">
           <p
             className="font-medium text-xl
-                        md:text-2xl
+                        md:text-3xl
                         lg:text-2xl text-[#633404]"
           >
             Instagram
           </p>
 
           <Link to={`https://www.instagram.com/petcafeoradea/`} target="_blank">
-            <p className="font-semibold underline text-2xl md:text-lg lg:text-lg xl:text-xl text-[#FFF8EA] text-center hover:transition-transform transform hover:scale-110 hover:no-underline hover:cursor-pointer">
+            <p className="font-semibold underline text-2xl md:text-2xl lg:text-lg xl:text-xl text-[#FFF8EA] text-center hover:transition-transform transform hover:scale-110 hover:no-underline hover:cursor-pointer">
               petcafeoradea
             </p>
           </Link>
@@ -30,7 +30,7 @@ function Footer() {
         <div className="flex flex-col justify-center items-center space-y-2 md:space-y-1">
           <p
             className="font-medium text-xl
-                        md:text-2xl
+                        md:text-3xl
                         lg:text-2xl text-[#633404]"
           >
             Facebook
@@ -40,7 +40,7 @@ function Footer() {
             to={`https://www.facebook.com/profile.php?id=61561317749365`}
             target="_blank"
           >
-            <p className="font-semibold underline text-2xl md:text-lg lg:text-lg xl:text-xl text-[#FFF8EA] text-center hover:transition-transform transform hover:scale-110 hover:no-underline hover:cursor-pointer">
+            <p className="font-semibold underline text-2xl md:text-2xl lg:text-lg xl:text-xl text-[#FFF8EA] text-center hover:transition-transform transform hover:scale-110 hover:no-underline hover:cursor-pointer">
               Pet Cafe Oradea
             </p>
           </Link>
@@ -50,14 +50,14 @@ function Footer() {
         <div className="flex flex-col justify-center items-center space-y-2 md:space-y-1">
           <p
             className="font-medium text-xl
-                        md:text-2xl
+                        md:text-3xl
                         lg:text-2xl text-[#633404]"
           >
             Tik Tok
           </p>
 
           <Link to={`https://www.tiktok.com/@petcafeoradea`} target="_blank">
-            <p className="font-semibold underline text-2xl md:text-lg lg:text-lg xl:text-xl text-[#FFF8EA] text-center hover:transition-transform transform hover:scale-110 hover:no-underline hover:cursor-pointer">
+            <p className="font-semibold underline text-2xl md:text-2xl lg:text-lg xl:text-xl text-[#FFF8EA] text-center hover:transition-transform transform hover:scale-110 hover:no-underline hover:cursor-pointer">
               petcafeoradea
             </p>
           </Link>
@@ -69,7 +69,7 @@ function Footer() {
         <div className="flex flex-col justify-center items-center space-y-2">
           <p
             className="font-medium text-base
-                        md:text-lg
+                        md:text-xl
                         lg:text-xl text-[#633404] text-center"
           >
             Piața 1 Decembrie, Nr. 12, Oradea
@@ -77,7 +77,7 @@ function Footer() {
         </div>
         <p
           className="font-medium text-base
-                       md:text-lg
+                       md:text-2xl
                        lg:text-xl
                        xl:text-2xl text-[#FFF8EA] text-center mt-4"
         >
