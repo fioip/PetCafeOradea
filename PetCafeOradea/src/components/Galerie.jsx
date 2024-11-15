@@ -25,7 +25,7 @@ import { Link } from "react-router-dom";
 
 function Galerie() {
   return (
-    <div className="md:ml-[25%] lg:ml-[25%] xl:ml-[20%]">
+    <div>
       <Banner />
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 p-6 bg-[#FDF6EC] ">
         {/* Mira */}
