@@ -9,7 +9,7 @@ import Navbar from "./Navbar.jsx";
 
 function Home() {
   return (
-    <div className="md:ml-[25%] lg:ml-[25%] xl:ml-[20%] h-full">
+    <div>
       <div className="bg-[#FFF8EA]">
         <Banner />
 

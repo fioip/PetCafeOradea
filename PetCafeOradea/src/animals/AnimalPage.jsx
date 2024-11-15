@@ -100,7 +100,7 @@ const AnimalPage = () => {
   }, []);
 
   return (
-    <div className="md:ml-[25%] lg:ml-[25%] xl:ml-[20%] h-full">
+    <div>
       <div className="flex flex-col items-center bg-[#FFF8EA] min-h-screen py-8 px-4">
         <div className="bg-white shadow-2xl rounded-3xl p-6 w-full max-w-4xl relative overflow-hidden lg:max-w-5xl">
           {/* Background Circle Decoration */}

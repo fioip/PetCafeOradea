@@ -7,11 +7,14 @@ import Navbar from "./components/Navbar";
 import Mira from "./animals/mira";
 import AnimalPage from "./animals/AnimalPage";
 import ScrollToTop from "./components/ScrollToTop";
+import TabletLayout from "./components/TabletLayout";
 
 function App() {
   return (
     <div className="flex h-screen">
       <Navbar />
+      <div className="flex flex-col">
+      <TabletLayout />
       <div className="flex-1 flex flex-col overflow-auto">
       <ScrollToTop />
         <Routes>
@@ -22,6 +25,7 @@ function App() {
           <Route path='/galerie/Mira' element={<Mira />} />
           <Route path="/animal/:animal" element={<AnimalPage />} />
         </Routes>
+      </div>
       </div>
     </div>
   );
