@@ -107,9 +107,9 @@ export const Misu = [
   {
     animalTitle: "Misu",
     imgURL: imgMisu,
-    smallText: "Această pisică adoră să fie în centrul atenției și să primească alinturi. Se va așeza lângă tine pe canapea...",
+    smallText: "Salut, numele meu este Mișu, sunt un motănel din rasa norvegiană de pădure, foarte jucaus si activ...",
     denumire:
-      "Această pisică adoră să fie în centrul atenției și să primească alinturi. Se va așeza lângă tine pe canapea sau îți va „cerși” atenția prin frecarea ușoară a botului. Este perfectă pentru cei care caută o companie afectuoasă și devotată.",
+      "Salut, numele meu este Mișu, sunt un motănel din rasa norvegiană de pădure, foarte jucaus si activ. Daca ar fi sa-mi gasesc un defect, acesta ar fi faptul ca sunt foarte curios…chiar prea curios uneori. Eu si Ash ne luptăm pentru titulatura de împărat al cafenelei zi de zi. Promit ca dacă voi fi ales președinte, voi exila toți câinii pe Marte.",
     additionalImages: additionalImagesMisu,
   },
 ];

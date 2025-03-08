@@ -4,10 +4,9 @@ import Galerie from "./components/Galerie";
 import Home from "./components/Home";
 import Meniu from "./components/Meniu";
 import Navbar from "./components/Navbar";
-import Mira from "./animals/mira";
+import Mira from "./animals/Mira";
 import AnimalPage from "./animals/AnimalPage";
 import ScrollToTop from "./components/ScrollToTop";
-import TabletLayout from "./components/TabletLayout";
 
 function App() {
   return (

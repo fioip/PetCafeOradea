@@ -5,7 +5,6 @@ import { IoRemoveOutline } from "react-icons/io5";
 import Footer from "./Footer";
 import { Animals } from "../constants/AnimalsHomePage.jsx";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar.jsx";
 
 function Home() {
   return (
