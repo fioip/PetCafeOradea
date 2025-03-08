@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FaPaw, FaArrowLeft, FaArrowRight, FaTimes } from "react-icons/fa";
 import {
@@ -36,6 +36,49 @@ const AnimalPage = () => {
 
   // Transformăm parametrul în litere mici pentru a fi sigur că găsim cheia corectă
   const selectedAnimal = animalsData[animal?.toLowerCase()]?.[0];
+  // Starea pentru imaginea curentă
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  // Stare pentru lightbox
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxImageIndex, setLightboxImageIndex] = useState(0);
+  
+  // For touch swipe detection
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+  const minSwipeDistance = 50; // Minimum distance for a swipe to be registered
+
+    // Adăugăm keyboard navigation pentru lightbox
+    useEffect(() => {
+      const handleKeyDown = (e) => {
+        if (!lightboxOpen) return;
+        
+        if (e.key === 'ArrowRight') {
+          navigateLightbox('next');
+        } else if (e.key === 'ArrowLeft') {
+          navigateLightbox('prev');
+        } else if (e.key === 'Escape') {
+          closeLightbox();
+        }
+      };
+  
+      window.addEventListener('keydown', handleKeyDown);
+      
+      return () => {
+        window.removeEventListener('keydown', handleKeyDown);
+      };
+    }, [lightboxOpen]);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        setIsVisible(window.scrollY > 300);
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+  
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
 
   // Verificăm dacă există date pentru animalul respectiv
   if (!selectedAnimal) {
@@ -45,18 +88,6 @@ const AnimalPage = () => {
       </p>
     );
   }
-
-  // Starea pentru imaginea curentă
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  // Stare pentru lightbox
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxImageIndex, setLightboxImageIndex] = useState(0);
-  
-  // For touch swipe detection
-  const [touchStart, setTouchStart] = useState(null);
-  const [touchEnd, setTouchEnd] = useState(null);
-  const minSwipeDistance = 50; // Minimum distance for a swipe to be registered
 
   // Handle touch events for swipe
   const handleTouchStart = (e) => {
@@ -148,39 +179,6 @@ const AnimalPage = () => {
       closeLightbox();
     }
   };
-
-  // Adăugăm keyboard navigation pentru lightbox
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (!lightboxOpen) return;
-      
-      if (e.key === 'ArrowRight') {
-        navigateLightbox('next');
-      } else if (e.key === 'ArrowLeft') {
-        navigateLightbox('prev');
-      } else if (e.key === 'Escape') {
-        closeLightbox();
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [lightboxOpen]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsVisible(window.scrollY > 300);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <div className="w-full">
