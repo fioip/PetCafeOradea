@@ -17,22 +17,22 @@ export const CAFEA = [
   {
     denumire: "Cortado",
     pret: "12 RON",
-    gramaj: "80ml",
+    gramaj: "130ml",
   },
   {
     denumire: "Flat White",
     pret: "18 RON",
-    gramaj: "150ml",
+    gramaj: "180ml",
   },
   {
     denumire: "Cappuccino",
     pret: "17 RON",
-    gramaj: "150ml",
+    gramaj: "180ml",
   },
   {
     denumire: "Latte",
     pret: "18 RON",
-    gramaj: "350ml",
+    gramaj: "300ml",
   },
   {
     denumire: "Iced Latte",
@@ -76,16 +76,16 @@ export const AROME = [
     pret: "3 RON",
   },
   {
-    denumire: "Matcha",
-    pret: "3 RON",
-  },
-  {
     denumire: "Cookie",
     pret: "3 RON",
   },
   {
     denumire: "Pumpkin Spice",
     pret: "4 RON",
+  },
+  {
+    denumire: "Apple Pie",
+    pret: "4 RON"
   },
   {
     denumire: "Bounty",
@@ -100,48 +100,48 @@ export const AROME = [
 export const CEAI = [
   {
     denumire: "Mentă & Anason",
-    pret: "15 RON",
-    gramaj: "200ml",
+    pret: "17 RON",
+    gramaj: "275ml",
   },
   {
     denumire: "Fructe de Pădure",
-    pret: "15 RON",
-    gramaj: "200ml",
+    pret: "17 RON",
+    gramaj: "275ml",
   },
   {
     denumire: "Mango & Maracuya",
-    pret: "15 RON",
-    gramaj: "200ml",
+    pret: "17 RON",
+    gramaj: "275ml",
   },
   {
     denumire: "Pina Colada",
-    pret: "15 RON",
-    gramaj: "200ml",
+    pret: "17 RON",
+    gramaj: "275ml",
   },
   {
     denumire: "Cocktail Tropical",
-    pret: "15 RON",
-    gramaj: "200ml",
+    pret: "17 RON",
+    gramaj: "275ml",
   },
   {
     denumire: "Verde Sencha",
-    pret: "15 RON",
-    gramaj: "200ml",
+    pret: "16 RON",
+    gramaj: "275ml",
   },
   {
     denumire: "Scorțișoară & Portocală",
-    pret: "15 RON",
-    gramaj: "200ml",
+    pret: "18 RON",
+    gramaj: "275ml",
   },
   {
     denumire: "Ghimbir & Mandarină",
-    pret: "15 RON",
-    gramaj: "200ml",
+    pret: "18 RON",
+    gramaj: "275ml",
   },
   {
     denumire: "Mușețel",
     pret: "16 RON",
-    gramaj: "200ml",
+    gramaj: "275ml",
   },
 ];
 
@@ -149,42 +149,42 @@ export const ICE_TEA = [
   {
     denumire: "Mentă & Anason",
     pret: "22 RON",
-    gramaj: "200ml",
+    gramaj: "350ml",
   },
   {
     denumire: "Fructe de Pădure",
     pret: "22 RON",
-    gramaj: "200ml",
+    gramaj: "350ml",
   },
   {
     denumire: "Mango & Maracuya",
     pret: "23 RON",
-    gramaj: "200ml",
+    gramaj: "350ml",
   },
   {
     denumire: "Pina Colada",
     pret: "23 RON",
-    gramaj: "200ml",
+    gramaj: "350ml",
   },
   {
     denumire: "Cocktail Tropical",
     pret: "23 RON",
-    gramaj: "200ml",
+    gramaj: "350ml",
   },
   {
     denumire: "Verde Sencha",
     pret: "22 RON",
-    gramaj: "200ml",
+    gramaj: "350ml",
   },
   {
     denumire: "Scorțișoară & Portocală",
     pret: "22 RON",
-    gramaj: "200ml",
+    gramaj: "350ml",
   },
   {
     denumire: "Ghimbir & Mandarină",
     pret: "22 RON",
-    gramaj: "200ml",
+    gramaj: "350ml",
   },
 ];
 
@@ -244,30 +244,30 @@ export const LIMONADA = [
 export const CIOCOLATA = [
   {
     denumire: "Albă",
-    pret: "17 RON",
-    gramaj: "150ml",
+    pret: "19 RON",
+    gramaj: "275ml",
   },
   {
     denumire: "Neagră",
-    pret: "17 RON",
-    gramaj: "150ml",
+    pret: "19 RON",
+    gramaj: "275ml",
   },
 ];
 
 export const FRESH = [
   {
     denumire: "Portocale",
-    pret: "17 RON",
+    pret: "19 RON",
     gramaj: "275ml",
   },
   {
     denumire: "Grapefruit",
-    pret: "17 RON",
+    pret: "19 RON",
     gramaj: "275ml",
   },
   {
     denumire: "Mixt",
-    pret: "17 RON",
+    pret: "19 RON",
     gramaj: "275ml",
   },
 ];
@@ -314,6 +314,11 @@ export const RACORITOARE = [
     gramaj: "250ml",
   },
   {
+    denumire: "Fuze Tea Piersică și Hibiscus",
+    pret: "12 RON",
+    gramaj: "250ml",
+  },
+  {
     denumire: "Cappy Pere",
     pret: "11 RON",
     gramaj: "250ml",
@@ -333,6 +338,11 @@ export const RACORITOARE = [
 export const BERE = [
   {
     denumire: "Heineken",
+    pret: "12 RON",
+    gramaj: "330ml",
+  },
+  {
+    denumire: "Heineken 0%",
     pret: "12 RON",
     gramaj: "330ml",
   },
@@ -405,30 +415,6 @@ export const COCKTAILS = [
       "Rom - 50ml, mentă, lime, sirop de zahăr - 20ml, piure de cocos - 15ml, Sprite - 100ml, gheță - 400ml",
   },
 ];
-
-export const MILKSHAKE = [
-  {
-    denumire: "Căpșuni",
-    pret: "TBA",
-    gramaj: "TBA",
-  },
-  {
-    denumire: "Banane",
-    pret: "TBA",
-    gramaj: "TBA",
-  },
-  {
-    denumire: "Căpșuni & Banane",
-    pret: "TBA",
-    gramaj: "TBA",
-  },
-  {
-    denumire: "Ciocolată",
-    pret: "TBA",
-    gramaj: "TBA",
-  },
-];
-
 export const EXTRA = [
   {
     denumire: "Cafea Decofeinizată",
@@ -444,16 +430,15 @@ export const EXTRA = [
     gramaj: "50ml",
   },
   {
-    denumire: "Lapte Vegetal",
-    pret: "1 RON",
-    gramaj: "50ml",
+    denumire: "Lapte Vegetal cocos",
+    pret: "4 RON"
   },
   {
-    denumire: "Gheață",
-    pret: "1 RON",
+    denumire: "Lapte Vegetal soya",
+    pret: "3 RON"
   },
   {
-    denumire: "Lămâie",
+    denumire: "Frișcă",
     pret: "1 RON",
   },
 ];
@@ -461,22 +446,18 @@ export const EXTRA = [
 export const GUSTARI = [
   {
     denumire: "Croissant cu Unt",
-    pret: "TBA",
-    gramaj: "TBA",
+    pret: "8 RON"
   },
   {
     denumire: "Croissant cu Ciocolată",
-    pret: "TBA",
-    gramaj: "TBA",
+    pret: "10 RON"
   },
   {
     denumire: "Budincă cu Ciocolată",
-    pret: "TBA",
-    gramaj: "TBA",
+    pret: "17 RON"
   },
   {
     denumire: "Budincă cu Vanilie",
-    pret: "TBA",
-    gramaj: "TBA",
+    pret: "17 RON"
   },
 ];

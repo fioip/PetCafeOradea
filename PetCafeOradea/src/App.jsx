@@ -13,10 +13,10 @@ function App() {
   return (
     <div className="flex h-screen">
       <Navbar />
-      <div className="flex flex-col">
-      <TabletLayout />
       <div className="flex-1 flex flex-col overflow-auto">
-      <ScrollToTop />
+        {/* Spațiu pentru navbar pe mobile/tabletă */}
+        <div className="h-16 sm:h-24 lg:hidden"></div>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/meniu" element={<Meniu />} />
@@ -25,7 +25,6 @@ function App() {
           <Route path='/galerie/Mira' element={<Mira />} />
           <Route path="/animal/:animal" element={<AnimalPage />} />
         </Routes>
-      </div>
       </div>
     </div>
   );

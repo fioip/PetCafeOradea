@@ -3,22 +3,23 @@ import {
   Kira,
   Tiramisu,
   Ash,
-  Plawan,
+  Misu,
   Baghera,
   Daisy,
-  Chilli,
+  Chili,
   Wendy,
   Winnie,
 } from "../constants/AnimalDescription";
-import miraPhoto from "../assets/photos/mira.jpeg";
-import kiraPhoto from "../assets/photos/kira.jpeg";
-import tiramisuPhoto from "../assets/photos/tiramisu.jpeg";
-import ashPhoto from "../assets/photos/ash.jpeg";
-import bagheraPhoto from "../assets/photos/baghera.jpeg";
-import daisyPhoto from "../assets/photos/daisy.jpeg";
-import chilliPhoto from "../assets/photos/chilli.jpeg";
-import wendyPhoto from "../assets/photos/wendy.jpeg";
-import winniePhoto from "../assets/photos/winnie.jpeg";
+import miraPhoto from "../assets/photos/mira/mira.jpg";
+import kiraPhoto from "../assets/photos/kira/kira.jpg";
+import tiramisuPhoto from "../assets/photos/tiramisu/tiramisu.jpg";
+import ashPhoto from "../assets/photos/ash/ash.jpeg";
+import misuPhoto from "../assets/photos/misu/misu.jpg";
+import bagheraPhoto from "../assets/photos/baghera/baghera.jpg";
+import daisyPhoto from "../assets/photos/daisy/daisy.jpeg";
+import chiliPhoto from "../assets/photos/chili/chili.jpg";
+import wendyPhoto from "../assets/photos/wendy/wendy.jpeg";
+import winniePhoto from "../assets/photos/winnie/winnie.jpeg";
 import Banner from "./Banner";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
@@ -49,7 +50,7 @@ function Galerie() {
 
             {/* Text descriptiv */}
             <div className="flex flex-col justify-between flex-grow mt-10">
-              <p className="text-[#633404] font-normal text-lg text-justify leading-relaxed">
+              <p className="text-[#633404] font-normal text-lg xl:text-lg lg:text-2xl text-justify leading-relaxed">
                 {mira.smallText}
               </p>
             </div>
@@ -89,7 +90,7 @@ function Galerie() {
 
             {/* Text descriptiv */}
             <div className="flex flex-col justify-between flex-grow mt-10">
-              <p className="text-[#633404] font-normal text-lg text-justify leading-relaxed">
+              <p className="text-[#633404] font-normal text-lg xl:text-lg lg:text-2xl text-justify leading-relaxed">
                 {kira.smallText}
               </p>
             </div>
@@ -129,7 +130,7 @@ function Galerie() {
 
             {/* Text descriptiv */}
             <div className="flex flex-col justify-between flex-grow mt-10">
-              <p className="text-[#633404] font-normal text-lg text-justify leading-relaxed">
+              <p className="text-[#633404] font-normal text-lg xl:text-lg lg:text-2xl text-justify leading-relaxed">
                 {tiramisu.smallText}
               </p>
             </div>
@@ -169,7 +170,7 @@ function Galerie() {
 
             {/* Text descriptiv */}
             <div className="flex flex-col justify-between flex-grow mt-10">
-              <p className="text-[#633404] font-normal text-lg text-justify leading-relaxed">
+              <p className="text-[#633404] font-normal text-lg xl:text-lg lg:text-2xl text-justify leading-relaxed">
                 {ash.smallText}
               </p>
             </div>
@@ -188,8 +189,8 @@ function Galerie() {
           </div>
         ))}
 
-        {/* Plawan */}
-        {Plawan.map((plawan, index) => (
+        {/* Misu */}
+        {Misu.map((Misu, index) => (
           <div
             key={index}
             className="relative flex flex-col bg-white rounded-3xl shadow-lg overflow-hidden p-6 transition-transform hover:scale-105"
@@ -197,26 +198,26 @@ function Galerie() {
             {/* Imaginea animalului */}
             <div className="relative flex justify-center items-center">
               <img
-                src={miraPhoto}
-                alt={plawan.animalTitle}
+                src={misuPhoto}
+                alt={Misu.animalTitle}
                 className="w-full h-[300px] object-cover rounded-3xl md:h-[200px] lg:h-[300px]"
               />
               {/* Overlay pentru titlu */}
               <h1 className="absolute inset-0 flex justify-center items-center text-5xl md:text-3xl lg:text-4xl font-bold text-[#FDF6EC] bg-black/40 rounded-3xl p-4">
-                {plawan.animalTitle}
+                {Misu.animalTitle}
               </h1>
             </div>
 
             {/* Text descriptiv */}
             <div className="flex flex-col justify-between flex-grow mt-10">
-              <p className="text-[#633404] font-normal text-lg text-justify leading-relaxed">
-                {plawan.smallText}
+              <p className="text-[#633404] font-normal text-lg xl:text-lg lg:text-2xl text-justify leading-relaxed">
+                {Misu.smallText}
               </p>
             </div>
 
             {/* Button */}
             <div className="mt-10 mx-auto">
-              <Link to={`/animal/${plawan.animalTitle.toLowerCase()}`}>
+              <Link to={`/animal/${Misu.animalTitle.toLowerCase()}`}>
                 <button
                   className="bg-[#633404] text-white px-4 py-2 rounded-lg text-lg transition-all duration-300 ease-in-out hover:bg-[#633304bb] hover:text-white hover:shadow-lg"
                   style={{ boxShadow: "4px 4px 15px rgba(0, 0, 0, 0.7)" }}
@@ -249,7 +250,7 @@ function Galerie() {
 
             {/* Text descriptiv */}
             <div className="flex flex-col justify-between flex-grow mt-10">
-              <p className="text-[#633404] font-normal text-lg text-justify leading-relaxed">
+              <p className="text-[#633404] font-normal text-lg xl:text-lg lg:text-2xl text-justify leading-relaxed">
                 {baghera.smallText}
               </p>
             </div>
@@ -289,7 +290,7 @@ function Galerie() {
 
             {/* Text descriptiv */}
             <div className="flex flex-col justify-between flex-grow mt-10">
-              <p className="text-[#633404] font-normal text-lg text-justify leading-relaxed">
+              <p className="text-[#633404] font-normal text-lg xl:text-lg lg:text-2xl text-justify leading-relaxed">
                 {daisy.smallText}
               </p>
             </div>
@@ -308,8 +309,8 @@ function Galerie() {
           </div>
         ))}
 
-        {/* Chilli */}
-        {Chilli.map((chilli, index) => (
+        {/* Chili */}
+        {Chili.map((chili, index) => (
           <div
             key={index}
             className="relative flex flex-col bg-white rounded-3xl shadow-lg overflow-hidden p-6 transition-transform hover:scale-105"
@@ -317,26 +318,26 @@ function Galerie() {
             {/* Imaginea animalului */}
             <div className="relative flex justify-center items-center">
               <img
-                src={chilliPhoto}
-                alt={chilli.animalTitle}
+                src={chiliPhoto}
+                alt={chili.animalTitle}
                 className="w-full h-[300px] object-cover rounded-3xl md:h-[200px] lg:h-[300px]"
               />
               {/* Overlay pentru titlu */}
               <h1 className="absolute inset-0 flex justify-center items-center text-5xl md:text-3xl lg:text-4xl font-bold text-[#FDF6EC] bg-black/40 rounded-3xl p-4">
-                {chilli.animalTitle}
+                {chili.animalTitle}
               </h1>
             </div>
 
             {/* Text descriptiv */}
             <div className="flex flex-col justify-between flex-grow mt-10">
-              <p className="text-[#633404] font-normal text-lg text-justify leading-relaxed">
-                {chilli.smallText}
+              <p className="text-[#633404] font-normal text-lg xl:text-lg lg:text-2xl text-justify leading-relaxed">
+                {chili.smallText}
               </p>
             </div>
 
             {/* Button */}
             <div className="mt-10 mx-auto">
-              <Link to={`/animal/${chilli.animalTitle.toLowerCase()}`}>
+              <Link to={`/animal/${chili.animalTitle.toLowerCase()}`}>
                 <button
                   className="bg-[#633404] text-white px-4 py-2 rounded-lg text-lg transition-all duration-300 ease-in-out hover:bg-[#633304bb] hover:text-white hover:shadow-lg"
                   style={{ boxShadow: "4px 4px 15px rgba(0, 0, 0, 0.7)" }}
@@ -369,7 +370,7 @@ function Galerie() {
 
             {/* Text descriptiv */}
             <div className="flex flex-col justify-between flex-grow mt-10">
-              <p className="text-[#633404] font-normal text-lg text-justify leading-relaxed">
+              <p className="text-[#633404] font-normal text-lg xl:text-lg lg:text-2xl text-justify leading-relaxed">
                 {wendy.smallText}
               </p>
             </div>
@@ -409,7 +410,7 @@ function Galerie() {
 
             {/* Text descriptiv */}
             <div className="flex flex-col justify-between flex-growmt-10 mt-10">
-              <p className="text-[#633404] font-normal text-lg text-justify leading-relaxed">
+              <p className="text-[#633404] font-normal text-lg xl:text-lg lg:text-2xl text-justify leading-relaxed">
                 {winnie.smallText}
               </p>
             </div>
