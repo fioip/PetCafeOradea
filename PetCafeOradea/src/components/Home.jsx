@@ -28,8 +28,8 @@ function Home() {
             </div>
           </div>
           <h2
-            className="text-justify leading-relaxed md:leading-relaxed lg:leading-9 md:ml-6 lg:-ml-5 
-          md:mr-6 lg:mr-8 xl:mr-8 text-lg md:text-3xl lg:text-2xl text-[#633404] font-medium "
+            className="text-justify leading-relaxed md:leading-relaxed lg:leading-10 md:ml-6 lg:-ml-5 
+          md:mr-6 lg:mr-8 xl:mr-8 text-lg md:text-3xl lg:text-3xl xl:text-2xl text-[#633404] font-medium "
           >
             În inima Oradei, Pet Cafe Oradea este o oază de liniște și bucurie
             pentru iubitorii de animale și cafea. Aici, într-o atmosferă caldă
@@ -45,7 +45,7 @@ function Home() {
             <Link to="/contact">
               <button
                 className="flex flex-row mt-10 bg-[#EF7F00] items-center justify-center p-4 rounded-full 
-              border-4 border-white pl-6 pr-5 pt-3 pb-3 md:pl-10 md:pr-8 text-lg md:text-xl xl:-ml-16 lg:-ml-[60px] text-white font-bold 
+              border-4 border-white pl-6 pr-5 pt-3 pb-3 md:pl-10 md:pr-8 text-lg md:text-3xl xl:-ml-16 lg:-ml-[60px] text-white font-bold 
               transition-all duration-300 ease-in-out transform hover:bg-[#D96E00] hover:scale-105"
                 style={{ boxShadow: "4px 4px 15px rgba(0, 0, 0, 0.7)" }}
               >
@@ -75,10 +75,13 @@ function Home() {
             {/* Afisarea animalelor pe rand care au fost salvate intr-o constanta */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-x-24 md:gap-x-16 lg:gap-x-28 xl:gap-x-16 gap-y-8 md:gap-y-12 justify-items-center mx-auto mt-10 max-w-screen-xl px-4 lg:px-8">
               {Animals.map((animal, index) => (
-                <Link to={`/animal/${animal?.denumire?.toLowerCase() || ''}`} key={index}>
+                <Link
+                  to={`/animal/${animal?.denumire?.toLowerCase() || ""}`}
+                  key={index}
+                >
                   <div key={index} className="flex flex-col items-center group">
                     <div
-                      className="relative w-32 h-32 lg:w-48 lg:h-48 rounded-full overflow-hidden 
+                      className="relative w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden 
                     transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 
                     group-hover:shadow-2xl group-hover:shadow-[#FFF8EA]"
                     >
@@ -90,7 +93,7 @@ function Home() {
                       />
                     </div>
                     <h2
-                      className="mt-2 mb-6 text-xl lg:text-2xl font-semibold transition-transform 
+                      className="mt-2 mb-6 text-xl md:text-2xl font-semibold transition-transform 
                     duration-300 ease-in-out group-hover:scale-110 group-hover:text-[#633404]"
                     >
                       {animal.denumire}
@@ -107,7 +110,7 @@ function Home() {
           <Link to="/galerie">
             <button
               className="flex flex-row mx-auto -my-8 bg-[#EF7F00] items-center justify-center p-4 
-              rounded-full border-4 border-white pt-3 pb-3 md:pl-8 md:pr-8 text-lg md:text-xl text-white font-bold 
+              rounded-full border-4 border-white pt-3 pb-3 md:pl-8 md:pr-8 text-lg md:text-3xl text-white font-bold 
               transition-all duration-300 ease-in-out transform hover:bg-[#D96E00] hover:scale-105"
               style={{ boxShadow: "4px 4px 15px rgba(0, 0, 0, 0.7)" }}
             >
@@ -131,35 +134,75 @@ function Home() {
             </div>
             <ul
               className="flex flex-col gap-6 mt-6 mb-20 text-[#633404] list-inside text-justify md:mr-6 lg:mr-10 lg:ml-6
-            xl:mr-10 xl:-ml-14 text-lg md:text-3xl lg:text-2xl leading-7 md:leading-relaxed lg:leading-10 sm:leading-6 list-none"
+            xl:mr-10 xl:-ml-14 text-lg md:text-3xl lg:text-3xl xl:text-2xl leading-7 md:leading-relaxed lg:leading-10 sm:leading-6 list-none"
             >
               <li>
-                <strong>Respectați animalele:</strong> Nu forțați animalele să
-                interacționeze dacă ele nu doresc. Respectați semnalele de stres
-                sau disconfort.
+                &bull; Atunci când un animal doarme, vă rugăm să nu îl treziți,
+                e mai bine să îl lăsați să-și facă somnul de frumusețe!
               </li>
               <li>
-                <strong>Nu hrăniți:</strong> Nu oferiți hrană animalelor fără
-                permisiunea personalului. Unele alimente pot fi dăunătoare
-                pentru animale.
+                &bull; De asemenea, vă rugăm să nu luați animăluțele în brațe,
+                în schimb să le lăsați pe ele să vină la voi!
               </li>
               <li>
-                <strong>Încălțați:</strong> Nu stați pe canapele sau fotolii cu
-                încălțăminte murdară.
+                &bull; În cazul în care doriți să luați un animal în brațe,
+                puteți chema o persoană din staff!
               </li>
               <li>
-                <strong>Spălați-vă pe mâini:</strong> După interacțiunea cu
-                animalele, vă rugăm să folosiți dezinfectantul pentru mâini
-                disponibil la intrare.
+                &bull; Vă rugăm să nu stresați animalele, să nu le trageți de
+                coadă sau de urechi, să nu le prindeți de bot, să nu faceți
+                zgomot puternic lângă ele!
               </li>
               <li>
-                <strong>Curățenie:</strong> Orice accident (de exemplu, de la
-                animale) trebuie raportat imediat personalului pentru a fi
-                curățat corespunzător.
+                &bull; Puteți face câte poze doriți cu ele, însă vă rugăm să fie
+                fără bliț! (de asemenea, acceptăm orice poze făcute împreună cu
+                animalele, pe pagina noastră de instagram)
               </li>
               <li>
-                <strong>Respectați liniștea:</strong> Nu faceți zgomote excesive
-                care ar putea speria animalele sau deranja alți clienți.
+                &bull; Copiii sub vârsta de 14 ani trebuie să fie supravegheați
+                tot timpul de un adult, să nu alerge și să nu bruscheze
+                animalele!
+              </li>
+              <li>
+                &bull; Animăluțele noastre sunt obișnuite cu o anumită hrană,
+                așa că vă rugăm să nu le oferiți un alt fel de mâncare și nici
+                să nu le lăsați să bea din băutura voastră!
+              </li>
+              <li>
+                &bull; Atât cățelușii cât și pisicuțele lasă păr, e inevitabil,
+                așa că vă punem la dispoziție role pentru a vă curăța!
+              </li>
+              <li>
+                &bull; Dacă observați pe cineva care încalcă una sau mai multe
+                reguli menționate mai sus privind animalele noastre, vă rugăm să
+                luați atitudine, fie anunțând personalul Pet Cafe, fie prin
+                atragerea atenției persoanei care face asta!
+              </li>
+              <li>
+                &bull; Oaspeții noștri sunt direct răspunzători pentru orice
+                inconveniență legată de animale (animalele noastre sunt foarte
+                blânde și jucăușe, iar zgârieturile sau mușcăturile sunt
+                posibile doar în cazul în care sunt provocate)
+              </li>
+              <li>
+                &bull; Consumația este obligatorie pentru fiecare persoană,
+                inclusiv copiii cu vărsta de peste 7 ani!
+              </li>
+              <li>
+                &bull; Animalele nu sunt ca oamenii, așa că e firesc să își facă
+                nevoile în diferite locuri, iar dacă observați asta, vă rugăm să
+                anunțați personalul Pet Cafe!
+              </li>
+              <li>
+                &bull; Ne rezervăm dreptul de a ne selecta clientela. Toți
+                iubitorii de animale sunt bineveniți!
+              </li>
+
+              <li>
+                <strong className="underline text-xl xl:text-2xl lg:text-3xl">
+                  Pentru siguranța animalelor noastre vă rugăm să țineți ușa
+                  închisă pe toată perioada șederii!
+                </strong>
               </li>
             </ul>
           </div>

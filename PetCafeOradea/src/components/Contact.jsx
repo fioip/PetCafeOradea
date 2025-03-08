@@ -24,7 +24,7 @@ function Contact() {
                   Telefon
                 </p>
                 <p className="font-semibold text-2xl md:text-2xl lg:text-2xl xl:text-3xl text-[#EF7F00]">
-                  0712 123 123
+                  0773 747 056
                 </p>
               </div>
 
@@ -105,8 +105,8 @@ function Contact() {
         {/* Cafe description */}
         <div className="mt-12">
           <h2
-            className="text-justify leading-7 md:leading-relaxed lg:leading-9 sm:leading-6 text-lg 
-          md:text-3xl lg:text-xl md:mr-12 lg:mr-16 mr-10 ml-10 md:ml-12 lg:ml-16 text-[#633404] font-medium "
+           className="text-justify leading-relaxed md:leading-relaxed lg:leading-10 ml-6 lg:-ml-5 xl:ml-8
+          mr-6 lg:mr-8 xl:mr-8 text-lg md:text-3xl lg:text-3xl xl:text-2xl text-[#633404] font-medium "
           >
             “Pet Cafe” este un concept nou în Oradea, inspirat din cultura
             asiatică, unde animalele sunt considerate parte din familie. În
