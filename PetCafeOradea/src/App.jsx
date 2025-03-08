@@ -1,33 +1,32 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Route, Routes } from "react-router-dom";
+import Contact from "./components/Contact";
+import Galerie from "./components/Galerie";
+import Home from "./components/Home";
+import Meniu from "./components/Meniu";
+import Navbar from "./components/Navbar";
+import Mira from "./animals/mira";
+import AnimalPage from "./animals/AnimalPage";
+import ScrollToTop from "./components/ScrollToTop";
+import TabletLayout from "./components/TabletLayout";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="flex h-screen">
+      <Navbar />
+      <div className="flex-1 flex flex-col overflow-auto">
+        {/* Spațiu pentru navbar pe mobile/tabletă */}
+        <div className="h-16 sm:h-24 lg:hidden"></div>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/meniu" element={<Meniu />} />
+          <Route path="/galerie" element={<Galerie />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path='/galerie/Mira' element={<Mira />} />
+          <Route path="/animal/:animal" element={<AnimalPage />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   );
 }
 
