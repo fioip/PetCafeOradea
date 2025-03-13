@@ -15,6 +15,7 @@ import {
 } from "../constants/AnimalDescription";
 import Footer from "../components/Footer";
 import ScrollToTopButton from "./TopPageButton";
+import { Helmet } from "react-helmet-async"; // Add Helmet for SEO
 
 const AnimalPage = () => {
   const { animal } = useParams();
@@ -47,45 +48,51 @@ const AnimalPage = () => {
   const [touchEnd, setTouchEnd] = useState(null);
   const minSwipeDistance = 50; // Minimum distance for a swipe to be registered
 
-    // Adăugăm keyboard navigation pentru lightbox
-    useEffect(() => {
-      const handleKeyDown = (e) => {
-        if (!lightboxOpen) return;
-        
-        if (e.key === 'ArrowRight') {
-          navigateLightbox('next');
-        } else if (e.key === 'ArrowLeft') {
-          navigateLightbox('prev');
-        } else if (e.key === 'Escape') {
-          closeLightbox();
-        }
-      };
-  
-      window.addEventListener('keydown', handleKeyDown);
+  // Adăugăm keyboard navigation pentru lightbox
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!lightboxOpen) return;
       
-      return () => {
-        window.removeEventListener('keydown', handleKeyDown);
-      };
-    }, [lightboxOpen]);
-  
-    useEffect(() => {
-      const handleScroll = () => {
-        setIsVisible(window.scrollY > 300);
-      };
-  
-      window.addEventListener("scroll", handleScroll);
-  
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, []);
+      if (e.key === 'ArrowRight') {
+        navigateLightbox('next');
+      } else if (e.key === 'ArrowLeft') {
+        navigateLightbox('prev');
+      } else if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [lightboxOpen]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // Verificăm dacă există date pentru animalul respectiv
   if (!selectedAnimal) {
     return (
-      <p className="text-center text-xl font-semibold text-gray-700 mt-20">
-        Animalul nu a fost găsit.
-      </p>
+      <>
+        <Helmet>
+          <title>Animal negăsit - Adăpost Animale</title>
+          <meta name="description" content="Pagina animalului nu a fost găsită în baza noastră de date." />
+        </Helmet>
+        <p className="text-center text-xl font-semibold text-gray-700 mt-20">
+          Animalul nu a fost găsit.
+        </p>
+      </>
     );
   }
 
@@ -180,8 +187,44 @@ const AnimalPage = () => {
     }
   };
 
+  // Generate schema.org structured data for the animal
+  const animalSchema = {
+    "@context": "https://schema.org",
+    "@type": "PetPosting", 
+    "name": selectedAnimal.animalTitle,
+    "description": selectedAnimal.denumire,
+    "image": selectedAnimal.additionalImages[0],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": window.location.href
+    }
+  };
+
   return (
     <div className="w-full">
+      {/* SEO Optimizations */}
+      <Helmet>
+        <title>{selectedAnimal.animalTitle} - Animale</title>
+        <meta name="description" content={selectedAnimal.denumire} />
+        <meta name="keywords" content={`${selectedAnimal.animalTitle}, adopție animale, adăpost, animal pentru adopție`} />
+        <link rel="canonical" href={window.location.href} />
+        {/* Open Graph tags */}
+        <meta property="og:title" content={`${selectedAnimal.animalTitle} - Adăpost Animale`} />
+        <meta property="og:description" content={selectedAnimal.denumire} />
+        <meta property="og:image" content={selectedAnimal.additionalImages[0]} />
+        <meta property="og:url" content={window.location.href} />
+        <meta property="og:type" content="website" />
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${selectedAnimal.animalTitle} - Adăpost Animale`} />
+        <meta name="twitter:description" content={selectedAnimal.denumire} />
+        <meta name="twitter:image" content={selectedAnimal.additionalImages[0]} />
+        {/* Schema.org structured data */}
+        <script type="application/ld+json">
+          {JSON.stringify(animalSchema)}
+        </script>
+      </Helmet>
+
       <div className="flex flex-col items-center bg-[#FFF8EA] w-full min-h-screen py-8">
         <div className="container mx-auto px-4 mt-24 md:mt-32 lg:mt-32 xl:mt-8">
           <div className="bg-white shadow-2xl rounded-3xl p-6 w-full relative overflow-hidden">
@@ -193,18 +236,19 @@ const AnimalPage = () => {
               <div className="flex flex-col justify-between">
                 <div className="text-left">
                   {/* Titlu - AnimalTitle */}
-                  <Link to={`/galerie`}>
+                  <Link to={`/galerie`} aria-label="Înapoi la galerie">
                     <button
                       className="bg-[#EF7F00] text-white p-3 rounded-full shadow-md hover:bg-[#ffd684] transition-transform transform hover:scale-110"
+                      aria-label="Navigare înapoi la galerie"
                     >
                       <div className="flex flex-row justify-center items-center">
-                        <FaArrowLeft />
+                        <FaArrowLeft aria-hidden="true" />
                         <h1 className="text-xl ml-2">Galerie</h1>
                       </div>
                     </button>
                   </Link>
                   <h1 className="text-3xl font-bold text-[#EF7F00] mb-12 mt-10 justify-center flex items-center lg:text-5xl">
-                    <FaPaw className="text-[#EF7F00] mr-2" />
+                    <FaPaw className="text-[#EF7F00] mr-2" aria-hidden="true" />
                     {selectedAnimal.animalTitle}
                   </h1>
 
@@ -221,8 +265,11 @@ const AnimalPage = () => {
                   {/* Imagine principală */}
                   <img
                     src={selectedAnimal.additionalImages[currentImageIndex]}
-                    alt={`${selectedAnimal.animalTitle} ${currentImageIndex + 1}`}
+                    alt={`${selectedAnimal.animalTitle}`}
                     className="w-48 h-48 object-cover rounded-full shadow-lg transform hover:scale-110 transition-transform duration-300 sm:w-60 sm:h-60 lg:w-80 lg:h-80"
+                    loading="eager"
+                    width="320"
+                    height="320"
                   />
                 </div>
 
@@ -234,15 +281,16 @@ const AnimalPage = () => {
                       <img
                         key={index}
                         src={image}
-                        alt={`${selectedAnimal.animalTitle} thumbnail ${
-                          index + 1
-                        }`}
+                        alt={`${selectedAnimal.animalTitle} imagine ${index + 1}`}
                         onClick={() => selectImage(index)}
                         className={`w-12 h-12 sm:w-16 sm:h-16 object-cover rounded-full cursor-pointer border-2 lg:w-20 lg:h-20 ${
                           currentImageIndex === index
                             ? "border-[#EF7F00]"
                             : "border-transparent hover:border-[#ffd684]"
                         } transition-all duration-200`}
+                        loading="lazy"
+                        width="80"
+                        height="80"
                       />
                     ))}
                 </div>
@@ -252,14 +300,16 @@ const AnimalPage = () => {
                   <button
                     onClick={handlePrevClick}
                     className="bg-[#EF7F00] text-white p-3 rounded-full shadow-md hover:bg-[#ffd684] transition-transform transform hover:scale-110"
+                    aria-label="Imagine anterioară"
                   >
-                    <FaArrowLeft />
+                    <FaArrowLeft aria-hidden="true" />
                   </button>
                   <button
                     onClick={handleNextClick}
                     className="bg-[#EF7F00] text-white p-3 rounded-full shadow-md hover:bg-[#ffd684] transition-transform transform hover:scale-110"
+                    aria-label="Imaginea următoare"
                   >
-                    <FaArrowRight />
+                    <FaArrowRight aria-hidden="true" />
                   </button>
                 </div>
               </div>
@@ -277,11 +327,17 @@ const AnimalPage = () => {
                   key={index}
                   className="relative group cursor-pointer"
                   onClick={() => openLightbox(index)}
+                  role="button"
+                  aria-label={`Deschide imaginea ${index + 1} cu ${selectedAnimal.animalTitle}`}
+                  tabIndex={0}
                 >
                   <img
                     src={image}
-                    alt={`Galerie ${index + 1}`}
+                    alt={`${selectedAnimal.animalTitle} imagine ${index + 1}`}
                     className="w-full h-40 object-cover rounded-xl shadow-md transform transition-transform duration-300 hover:scale-105 hover:rotate-1"
+                    loading="lazy"
+                    width="250"
+                    height="160"
                   />
                 </div>
               ))}
@@ -298,28 +354,33 @@ const AnimalPage = () => {
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Vizualizare imagine mare"
         >
           <div className="relative max-w-screen-lg flex items-center justify-center">
             {/* Buton de închidere */}
             <button
               onClick={closeLightbox}
               className="absolute top-2 right-2 text-white text-3xl md:text-5xl lg:text-6xl xl:text-3xl p-2 hover:text-[#EF7F00] z-10"
+              aria-label="Închide lightbox"
             >
-              <FaTimes />
+              <FaTimes aria-hidden="true" />
             </button>
             
             {/* Buton navigare înapoi */}
             <button
               onClick={() => navigateLightbox('prev')}
               className="absolute left-4 text-white md:text-4xl xl:text-xs bg-black bg-opacity-50 p-3 rounded-full hover:bg-[#EF7F00] transform transition-transform hover:scale-110 z-10"
+              aria-label="Imaginea anterioară"
             >
-              <FaArrowLeft />
+              <FaArrowLeft aria-hidden="true" />
             </button>
             
             {/* Imagine activă */}
             <img
               src={selectedAnimal.additionalImages[lightboxImageIndex]}
-              alt={`Lightbox ${lightboxImageIndex + 1}`}
+              alt={`${selectedAnimal.animalTitle} imagine completă ${lightboxImageIndex + 1}`}
               className="w-auto max-h-[80vh] max-w-full rounded-lg shadow-2xl transition-transform duration-300"
             />
             
@@ -327,8 +388,9 @@ const AnimalPage = () => {
             <button
               onClick={() => navigateLightbox('next')}
               className="absolute right-4 text-white md:text-4xl xl:text-xs bg-black bg-opacity-50 p-3 rounded-full hover:bg-[#EF7F00] transform transition-transform hover:scale-110 z-10"
+              aria-label="Imaginea următoare"
             >
-              <FaArrowRight />
+              <FaArrowRight aria-hidden="true" />
             </button>
             
             {/* Indicator pagină curentă */}

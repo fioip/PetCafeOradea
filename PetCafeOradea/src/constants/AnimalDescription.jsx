@@ -63,9 +63,9 @@ export const Mira = [
   {
     animalTitle: "Mira",
     imgURL: imgMira,
-    smallText: "Sunt o domnisoara din rasa british shorthair, foarte calma, ador somnul si pliculețele...",
+    smallText: "Sunt o domnișoară din rasa british shorthair, foarte calmă, ador somnul și pliculețele...",
     denumire:
-      "Sunt o domnisoara din rasa british shorthair, foarte calma, ador somnul si pliculețele. (Da, eu sunt pisicuta care adoarme pe spate intotdeauna).",
+      "Sunt o domnișoară din rasa british shorthair, foarte calmă, ador somnul și pliculețele. (Da, eu sunt pisicuță care adoarme pe spate întotdeauna).",
     additionalImages: additionalImagesMira,
   },
 ];
@@ -74,9 +74,9 @@ export const Kira = [
   {
     animalTitle: "Kira",
     imgURL: imgKira,
-    smallText: "Sunt o fetita din rasa british shorthair, prietenoasa de obicei dar am si eu toanele mele, evident...",
+    smallText: "Sunt o fetiță din rasa british shorthair, prietenoasă de obicei dar am și eu toanele mele, evident...",
     denumire:
-      "Sunt o fetita din rasa british shorthair, prietenoasa de obicei dar am si eu toanele mele, evident. Imi place sa ma joc cu ghiozdanele clientilor si adorm mereu pe mese. P.S.: daca iti lasi cappuccino-ul nesupravegheat mai mult de 3 secunde fii sigur ca-l voi ataca!",
+      "Sunt o fetiță din rasa british shorthair, prietenoasă de obicei dar am și eu toanele mele, evident. Îmi place să mă joc cu ghiozdanele clienților și adorm mereu pe mese. P.S.: dacă îți lași cappuccino-ul nesupravegheat mai mult de 3 secunde fii sigur că-l voi ataca!",
     additionalImages: additionalImagesKira,
   },
 ];
@@ -85,9 +85,9 @@ export const Tiramisu = [
   {
     animalTitle: "Tiramisu",
     imgURL: imgTiramisu,
-    smallText: "Sunt o fetita din rasa Siameza, foarte iubitoare si jucausa. Adorm mereu in pătuțul cațeilor si nimeni ma poate...",
+    smallText: "Sunt o fetiță din rasa Siameza, foarte iubitoare și jucăușă. Adorm mereu în pătuțul cățeilor și nimeni mă poate...",
     denumire:
-      "Sunt o fetita din rasa Siameza, foarte iubitoare si jucausa. Adorm mereu in pătuțul cațeilor si nimeni ma poate opri din a face asta!",
+      "Sunt o fetiță din rasa Siameza, foarte iubitoare și jucaușă. Adorm mereu în pătuțul cățeilor si nimeni mă poate opri din a face asta!",
     additionalImages: additionalImagesTiramisu,
   },
 ];
@@ -96,9 +96,9 @@ export const Ash = [
   {
     animalTitle: "Ash",
     imgURL: imgAsh,
-    smallText: "Eu sunt un motanel persan, evident prințul din local. Motto-ul meu in viata e “ai pliculet stau, n-ai pliculet ceau”...",
+    smallText: "Eu sunt un motănel persan, evident prințul din local. Motto-ul meu în viață e “ai pliculeț stau, n-ai pliculeț ceau”...",
     denumire:
-      "Eu sunt un motanel persan, evident prințul din local. Motto-ul meu in viata e “ai pliculet stau, n-ai pliculet ceau”. Imi plac la nebunie jucariile si mângăierea sub bărbiță. ",
+      "Eu sunt un motănel persan, evident prințul din local. Motto-ul meu în viață e “ai pliculeț stau, n-ai pliculeț ceau”. Îmi plac la nebunie jucăriile și mângăierea sub bărbiță. ",
     additionalImages: additionalImagesAsh,
   },
 ];
@@ -107,9 +107,9 @@ export const Misu = [
   {
     animalTitle: "Misu",
     imgURL: imgMisu,
-    smallText: "Salut, numele meu este Mișu, sunt un motănel din rasa norvegiană de pădure, foarte jucaus si activ...",
+    smallText: "Salut, numele meu este Mișu, sunt un motănel din rasa norvegiană de pădure, foarte jucăuș și activ...",
     denumire:
-      "Salut, numele meu este Mișu, sunt un motănel din rasa norvegiană de pădure, foarte jucaus si activ. Daca ar fi sa-mi gasesc un defect, acesta ar fi faptul ca sunt foarte curios…chiar prea curios uneori. Eu si Ash ne luptăm pentru titulatura de împărat al cafenelei zi de zi. Promit ca dacă voi fi ales președinte, voi exila toți câinii pe Marte.",
+      "Salut, numele meu este Mișu, sunt un motănel din rasa norvegiană de pădure, foarte jucăus și activ. Dacș ar fi să-mi găsesc un defect, acesta ar fi faptul că sunt foarte curios…chiar prea curios uneori. Eu și Ash ne luptăm pentru titulatura de împărat al cafenelei zi de zi. Promit că dacă voi fi ales președinte, voi exila toți câinii pe Marte.",
     additionalImages: additionalImagesMisu,
   },
 ];
@@ -129,9 +129,9 @@ export const Daisy = [
   {
     animalTitle: "Daisy",
     imgURL: imgDaisy,
-    smallText: "Sunt o fetita din rasa Pomeranian, jucausa si blanda, dar nu cu toata lumea...",
+    smallText: "Sunt o fetiță din rasa Pomeranian, jucaușă și blândă, dar nu cu toata lumea...",
     denumire:
-      "Sunt o fetita din rasa Pomeranian, jucausa si blanda, dar nu cu toata lumea! Daca dorm, va rog sa ma lasati sa-mi fac semnul de frumusete ca altfel s-a zis cu voi!",
+      "Sunt o fetiță din rasa Pomeranian, jucaușă și blandă, dar nu cu toata lumea! Dacă dorm, vă rog să mă lasați să-mi fac somnul de frumusețe că altfel s-a zis cu voi!",
     additionalImages: additionalImagesDaisy,
   },
 ];
@@ -140,9 +140,9 @@ export const Chili = [
   {
     animalTitle: "Chili",
     imgURL: imgChili,
-    smallText: "Sunt o fetita din rasa Pug, jucausa si foarte energica, dar si somnul e pe masura...",
+    smallText: "Sunt o fetiță din rasa Pug, jucaușă și foarte energică, dar și somnul e pe măsură...",
     denumire:
-      "Sunt o fetita din rasa Pug, jucausa si foarte energica, dar si somnul e pe masura!",
+      "Sunt o fetiță din rasa Pug, jucaușă și foarte energică, dar și somnul e pe măsură!",
     additionalImages: additionalImagesChili,
   },
 ];
@@ -151,9 +151,9 @@ export const Wendy = [
   {
     animalTitle: "Wendy",
     imgURL: imgWendy,
-    smallText: "Suntem doua surori din rasa Teckel, foarte jucause si adormim mereu impreuna...",
+    smallText: "Suntem două surori din rasa Teckel, foarte jucaușe și adormim mereu împreună...",
     denumire:
-      "Suntem doua surori din rasa Teckel, foarte jucause si adormim mereu impreuna. Ne plac gustarile si sa ne jucam cu pisicutele!",
+      "Suntem doua surori din rasa Teckel, foarte jucaușe și adormim mereu împreună. Ne plac gustările și să ne jucăm cu pisicuțele!",
     additionalImages: additionalImagesWendy,
   },
 ];
@@ -162,9 +162,9 @@ export const Winnie = [
   {
     animalTitle: "Winnie",
     imgURL: imgWinnie,
-    smallText: "Suntem doua surori din rasa Teckel, foarte jucause si adormim mereu impreuna...",
+    smallText: "Suntem două surori din rasa Teckel, foarte jucaușe și adormim mereu împreună...",
     denumire:
-      "Suntem doua surori din rasa Teckel, foarte jucause si adormim mereu impreuna. Ne plac gustarile si sa ne jucam cu pisicutele!",
+      "Suntem doua surori din rasa Teckel, foarte jucaușe și adormim mereu împreună. Ne plac gustările și să ne jucăm cu pisicuțele!",
     additionalImages: additionalImagesWinnie,
   },
 ];

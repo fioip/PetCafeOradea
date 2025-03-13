@@ -1,7 +1,6 @@
+import { Helmet } from "react-helmet-async";
 import Banner from "./Banner";
 import { IoRemoveOutline } from "react-icons/io5";
-// import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-// import imageHome from "../assets/photos/ash.jpeg";
 import Footer from "./Footer";
 import { Animals } from "../constants/AnimalsHomePage.jsx";
 import { Link } from "react-router-dom";
@@ -9,6 +8,31 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div>
+      <Helmet>
+        <title>Pet Cafe Oradea - Cafenea cu animale pentru iubitorii de cafea și animale</title>
+        <meta name="description" content="În inima Oradei, Pet Cafe Oradea este o oază de liniște și bucurie pentru iubitorii de animale și cafea. Vizitează-ne pentru a te relaxa cu o cafea în compania animalelor noastre prietenoase." />
+        <meta name="keywords" content="pet cafe, cafe animale, cafenea pisici, cafenea câini, Oradea, relaxare, animale de companie" />
+        <link rel="canonical" href="https://petcafeoradea.com/" />
+        <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "CafeOrCoffeeShop",
+            "name": "Pet Cafe Oradea",
+            "description": "Cafenea prietenoasă cu animale în Oradea, unde te poți relaxa savurând o cafea în compania pisicilor și câinilor.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Oradea",
+              "addressRegion": "Bihor",
+              "addressCountry": "Romania"
+            },
+            "image": "https://petcafeoradea.com/images/logo.jpg",
+            "priceRange": "$$",
+            "openingHours": "Lu-Du 10:00-22:00"
+          }
+        `}
+        </script>
+      </Helmet>
       <div className="bg-[#FFF8EA]">
         <Banner />
 
@@ -16,7 +40,7 @@ function Home() {
         <div className="mt-20 mx-6 md:mt-16 lg:mt-20 lg:ml-20 z-50">
           <div className="flex flex-col items-center md:items-center">
             <div className="flex flex-col items-center justify-center md:justify-items-center xl:-ml-16 lg:-ml-14">
-              <h1 className="text-4xl md:text-4xl font-bold text-[#633404] text-center ">
+              <h1 className="text-4xl md:text-4xl font-bold text-[#633404] text-center">
                 Despre noi
               </h1>
 
@@ -30,10 +54,10 @@ function Home() {
             className="text-justify leading-relaxed md:leading-relaxed lg:leading-10 md:ml-6 lg:-ml-5 
           md:mr-6 lg:mr-8 xl:mr-8 text-lg md:text-3xl lg:text-3xl xl:text-2xl text-[#633404] font-medium "
           >
-            În inima Oradei, Pet Cafe Oradea este o oază de liniște și bucurie
-            pentru iubitorii de animale și cafea. Aici, într-o atmosferă caldă
+            În inima Oradei, <strong>Pet Cafe Oradea</strong> este o oază de liniște și bucurie
+            pentru iubitorii de <em>animale și cafea</em>. Aici, într-o atmosferă caldă
             și primitoare, te poți relaxa savurând o cafea aromată, în timp ce
-            te joci cu prietenii blănoși ai cafenelei. Decorul cozy și
+            te joci cu <em>prietenii blănoși</em> ai cafenelei. Decorul cozy și
             personalul prietenos te fac să te simți ca acasă, iar compania
             pisicilor și câinilor adaugă o notă de veselie și confort fiecărui
             moment petrecut aici.
@@ -41,7 +65,7 @@ function Home() {
 
           {/* Realizarea butonului */}
           <div className="flex justify-center items-center">
-            <Link to="/contact">
+            <Link to="/contact" aria-label="Contactează-ne pentru mai multe informații">
               <button
                 className="flex flex-row mt-10 bg-[#EF7F00] items-center justify-center p-4 rounded-full 
               border-4 border-white pl-6 pr-5 pt-3 pb-3 md:pl-10 md:pr-8 text-lg md:text-3xl xl:-ml-16 lg:-ml-[60px] text-white font-bold 
@@ -61,9 +85,9 @@ function Home() {
         >
           <div className="flex flex-col items-center md:items-center">
             <div className="flex flex-col items-center justify-center md:justify-items-center">
-              <h1 className="text-4xl md:text-4xl font-bold text-[#633404] text-center">
+              <h2 className="text-4xl md:text-4xl font-bold text-[#633404] text-center">
                 Animăluțele Noastre
-              </h1>
+              </h2>
 
               {/* Linia responsive sub titlu */}
               <div className="mt-2 md:mt-1 lg:mt-1">
@@ -77,6 +101,7 @@ function Home() {
                 <Link
                   to={`/animal/${animal?.denumire?.toLowerCase() || ""}`}
                   key={index}
+                  aria-label={`Vizitează pagina lui ${animal.denumire}, animal de companie la Pet Cafe Oradea`}
                 >
                   <div key={index} className="flex flex-col items-center group">
                     <div
@@ -86,17 +111,18 @@ function Home() {
                     >
                       <img
                         src={animal.imagine}
-                        alt={animal.denumire}
+                        alt={`${animal.denumire} - animal de companie la Pet Cafe Oradea`}
                         className="w-full h-full object-cover rounded-full transition-transform 
                         duration-700 ease-out group-hover:scale-125 group-hover:rotate-6"
+                        loading="lazy"
                       />
                     </div>
-                    <h2
+                    <h3
                       className="mt-2 mb-6 text-xl md:text-2xl font-semibold transition-transform 
                     duration-300 ease-in-out group-hover:scale-110 group-hover:text-[#633404]"
                     >
                       {animal.denumire}
-                    </h2>
+                    </h3>
                   </div>
                 </Link>
               ))}
@@ -106,7 +132,7 @@ function Home() {
 
         {/* Butonul de Galerie */}
         <div className="flex justify-center items-center">
-          <Link to="/galerie">
+          <Link to="/galerie" aria-label="Vizitează galeria noastră de imagini cu animale">
             <button
               className="flex flex-row mx-auto -my-8 bg-[#EF7F00] items-center justify-center p-4 
               rounded-full border-4 border-white pt-3 pb-3 md:pl-8 md:pr-8 text-lg md:text-3xl text-white font-bold 
@@ -122,9 +148,9 @@ function Home() {
         <div className="mt-24 mx-6 md:mt-32 lg:mt-32">
           <div className="flex flex-col items-center md:items-center md:ml-6 xl:ml-24">
             <div className="flex flex-col items-center justify-center xl:-ml-24 lg:-ml-6">
-              <h1 className="text-4xl md:text-4xl font-bold text-[#633404] text-center">
+              <h2 className="text-4xl md:text-4xl font-bold text-[#633404] text-center">
                 Regulament
-              </h1>
+              </h2>
 
               {/* Linia responsive sub titlu */}
               <div className="mt-2 md:mt-1 lg:mt-1">
