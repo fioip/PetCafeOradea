@@ -18,33 +18,33 @@ const Navbar = () => {
     switch(currentPath) {
       case '/':
         return {
-          title: "Pet Cafe | Cafeneaua Ta Preferată în București",
-          description: "Descoperă Pet Cafe, o cafenea unică în București. Savurează băuturi delicioase și deserturi în atmosfera noastră primitoare. NOT PET FRIENDLY.",
-          keywords: "pet cafe, cafenea bucurești, cafenea, deserturi, băuturi"
+          title: "Pet Cafe Oradea - Cafenea cu animale pentru iubitorii de cafea și animale",
+          description: "În inima Oradei, Pet Cafe Oradea este o oază de liniște și bucurie pentru iubitorii de animale și cafea. Vizitează-ne pentru a te relaxa cu o cafea în compania animalelor noastre prietenoase.",
+          keywords: "pet cafe, pet cafe Oradea, cafe animale, cafenea pisici, cafenea câini, Oradea"
         };
       case '/meniu':
         return {
-          title: "Meniu | Pet Cafe București",
-          description: "Explorează meniul nostru variat de cafele, băuturi și deserturi delicioase la Pet Cafe București.",
-          keywords: "meniu pet cafe, cafea, deserturi, băuturi, prețuri"
+          title: "Meniu Pet Cafe Oradea - Băuturi și Gustări",
+          description: "Descoperă meniul Pet Cafe Oradea cu o varietate de cafea de specialitate, ceaiuri, limonade, cocktailuri și gustări delicioase, într-un ambient plăcut alături de animăluțe.",
+          keywords: "Pet Cafe Oradea, meniu, cafea specialitate, ceai specialitate, limonada, cocktails, gustari, animal cafe"
         };
       case '/galerie':
         return {
-          title: "Galerie Foto | Pet Cafe București",
-          description: "Privește galeria noastră foto și descoperă atmosfera unică din Pet Cafe București.",
-          keywords: "galerie pet cafe, poze cafenea, interior pet cafe"
+          title: "Galerie Pet Cafe Oradea - Galerie Animale de Companie<",
+          description: "Descoperă galeria noastră cu animale de companie disponibile. Fiecare animal are propria poveste.",
+          keywords: "pet cafe oradea, pisici, câini, animale de companie"
         };
       case '/contact':
         return {
-          title: "Contact | Pet Cafe București",
-          description: "Contactează-ne sau găsește locația Pet Cafe în București. Program, hartă și informații de contact.",
-          keywords: "contact pet cafe, locație, program, rezervări"
+          title: "Contact Pet Cafe Oradea - Cafenea cu Animale de Companie",
+          description: "Contactează Pet Cafe Oradea - prima cafenea cu animale din Oradea. Telefon, email, adresă și rețele sociale pentru a ne vizita sau a afla mai multe despre noi.",
+          keywords: "pet cafe, pet cafe Oradea, contact pet cafe, cafenea cu animale Oradea, locație Pet Cafe"
         };
       default:
         return {
-          title: "Pet Cafe | Cafeneaua din București",
-          description: "Pet Cafe - O cafenea unică în București cu atmosferă plăcută și produse de calitate. NOT PET FRIENDLY.",
-          keywords: "pet cafe, cafenea, bucurești"
+          title: "Pet Cafe Oradea",
+          description: "Pet Cafe Oradea - O cafenea unică în Oradea cu atmosferă plăcută și produse de calitate. NOT PET FRIENDLY.",
+          keywords: "pet cafe, pet cafe Oradea, cafenea"
         };
     }
   };

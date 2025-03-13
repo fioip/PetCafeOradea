@@ -35,14 +35,15 @@ function Meniu() {
   return (
     <>
       <Helmet>
-        <title>Meniu Pet Cafe Oradea - Băuturi și Gustări de Calitate</title>
+        <title>Meniu Pet Cafe Oradea - Băuturi și Gustări</title>
         <meta name="description" content="Descoperă meniul Pet Cafe Oradea cu o varietate de cafea de specialitate, ceaiuri, limonade, cocktailuri și gustări delicioase, într-un ambient plăcut alături de animăluțe." />
-        <meta name="keywords" content="Pet Cafe Oradea, meniu, cafea specialitate, ceai, limonada, cocktails, gustari, animal cafe" />
+        <meta name="keywords" content="Pet Cafe Oradea, meniu, cafea specialitate, ceai specialitate, limonada, cocktails, gustari, animal cafe" />
         <link rel="canonical" href="https://petcafeoradea.com/meniu" />
         <meta property="og:title" content="Meniu Pet Cafe Oradea" />
         <meta property="og:description" content="Descoperă varietatea de băuturi și gustări din meniul Pet Cafe Oradea - un loc special unde te poți relaxa alături de animăluțe." />
         <meta property="og:url" content="https://petcafeoradea.com/meniu" />
         <meta property="og:type" content="website" />
+        <html lang="ro" />
       </Helmet>
       
       <div className="bg-[#FFF8EA]">

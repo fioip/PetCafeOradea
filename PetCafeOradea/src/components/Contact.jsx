@@ -14,10 +14,11 @@ function Contact() {
     <>
       {/* SEO Meta Tags - acestea nu afectează layout-ul */}
       <Helmet>
-        <title>Contact Pet Cafe Oradea | Cafenea cu Animale de Companie</title>
+        <title>Contact Pet Cafe Oradea - Cafenea cu Animale de Companie</title>
         <meta name="description" content="Contactează Pet Cafe Oradea - prima cafenea cu animale din Oradea. Telefon, email, adresă și rețele sociale pentru a ne vizita sau a afla mai multe despre noi." />
-        <meta name="keywords" content="Pet Cafe Oradea, contact pet cafe, cafenea cu animale Oradea, cat cafe Oradea, dog cafe, locație Pet Cafe" />
+        <meta name="keywords" content="pet cafe, pet cafe Oradea, contact pet cafe, cafenea cu animale Oradea, locație Pet Cafe" />
         <link rel="canonical" href="https://petcafeoradea.com/contact" />
+        <html lang="ro" />
       </Helmet>
 
       <div>

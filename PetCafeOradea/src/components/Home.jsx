@@ -11,7 +11,7 @@ function Home() {
       <Helmet>
         <title>Pet Cafe Oradea - Cafenea cu animale pentru iubitorii de cafea și animale</title>
         <meta name="description" content="În inima Oradei, Pet Cafe Oradea este o oază de liniște și bucurie pentru iubitorii de animale și cafea. Vizitează-ne pentru a te relaxa cu o cafea în compania animalelor noastre prietenoase." />
-        <meta name="keywords" content="pet cafe, cafe animale, cafenea pisici, cafenea câini, Oradea, relaxare, animale de companie" />
+        <meta name="keywords" content="pet cafe, pet cafe Oradea, cafe animale, cafenea pisici, cafenea câini, Oradea" />
         <link rel="canonical" href="https://petcafeoradea.com/" />
         <script type="application/ld+json">
         {`
@@ -26,7 +26,7 @@ function Home() {
               "addressRegion": "Bihor",
               "addressCountry": "Romania"
             },
-            "image": "https://petcafeoradea.com/images/logo.jpg",
+            "image": {config.imgURL},
             "priceRange": "$$",
             "openingHours": "Lu-Du 10:00-22:00"
           }

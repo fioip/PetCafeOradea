@@ -78,32 +78,34 @@ const Banner = () => {
   // Structurare pentru Schema.org JSON-LD
   const schemaOrgData = {
     "@context": "https://schema.org",
-    "@type": "Cafe",
-    "name": "Pet Cafe",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Pet Cafe Oradea",
+    "description": "Cafenea prietenoasă cu animale în Oradea, unde te poți relaxa savurând o cafea în compania pisicilor și câinilor.",
     "image": config.imgURL,
-    "description": config.description,
-    "openingHours": "Mo-Su 10:00-20:00",
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "RO"
+      "addressLocality": "Oradea",
+      "addressRegion": "Bihor",
+      "addressCountry": "Romania"
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>{config.pageTitle}</title>
-        <meta name="description" content={config.description} />
-        <meta property="og:title" content={config.pageTitle} />
-        <meta property="og:description" content={config.description} />
-        <meta property="og:image" content={config.imgURL} />
+        <title>Pet Cafe Oradea - Cafenea cu animale pentru iubitorii de cafea și animale</title>
+        <meta name="description" content="În inima Oradei, Pet Cafe Oradea este o oază de liniște și bucurie pentru iubitorii de animale și cafea. Vizitează-ne pentru a te relaxa cu o cafea în compania animalelor noastre prietenoase." />
+        <meta name="keywords" content="pet cafe, pet cafe Oradea, cafe animale, cafenea pisici, cafenea câini, Oradea, relaxare, animale de companie" />
+        <meta property="og:title" content="Pet Cafe Oradea - Cafenea cu animale pentru iubitorii de cafea și animale" />
+        <meta property="og:description" content="În inima Oradei, Pet Cafe Oradea este o oază de liniște și bucurie pentru iubitorii de animale și cafea. Vizitează-ne pentru a te relaxa cu o cafea în compania animalelor noastre prietenoase." />
+        <meta property="og:image" content={config.imgURL}  />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={window.location.href} />
+        <meta property="og:url" content="https://petcafeoradea.com/" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={config.pageTitle} />
-        <meta name="twitter:description" content={config.description} />
-        <meta name="twitter:image" content={config.imgURL} />
-        <link rel="canonical" href={window.location.href} />
+        <meta name="twitter:title" content="Pet Cafe Oradea - Cafenea cu animale pentru iubitorii de cafea și animale" />
+        <meta name="twitter:description" content="În inima Oradei, Pet Cafe Oradea este o oază de liniște și bucurie pentru iubitorii de animale și cafea. Vizitează-ne pentru a te relaxa cu o cafea în compania animalelor noastre prietenoase." />
+        <meta name="twitter:image" content={config.imgURL}  />
+        <link rel="canonical" href="https://petcafeoradea.com/" />
         <html lang="ro" />
         <script type="application/ld+json">
           {JSON.stringify(schemaOrgData)}

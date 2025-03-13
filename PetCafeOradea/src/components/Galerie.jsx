@@ -29,16 +29,17 @@ function Galerie() {
   return (
     <div>
       <Helmet>
-        <title>Galerie Animale de Companie | Adoptă un Prieten Loial</title>
-        <meta name="description" content="Descoperă galeria noastră cu animale de companie disponibile pentru adopție. Fiecare animal are propria poveste și așteaptă cu nerăbdare să-și găsească o familie iubitoare." />
-        <meta name="keywords" content="adopție animale, pisici, câini, animale de companie, adopție, salvare animale" />
+        <title>Galerie Pet Cafe Oradea - Galerie Animale de Companie</title>
+        <meta name="description" content="Descoperă galeria noastră cu animale de companie disponibile. Fiecare animal are propria poveste." />
+        <meta name="keywords" content="pet cafe oradea, pisici, câini, animale de companie" />
         <link rel="canonical" href="https://petcafeoradea.com/galerie" />
-        <meta property="og:title" content="Galerie Animale de Companie | Adoptă un Prieten Loial" />
+        <meta property="og:title" content="Galerie Pet Cafe Oradea" />
         <meta property="og:description" content="Descoperă galeria noastră cu animale de companie disponibile pentru adopție. Fiecare animal are propria poveste și așteaptă cu nerăbdare să-și găsească o familie iubitoare." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://petcafeoradea.com/galerie" />
         <meta property="og:image" content="https://petcafeoradea.com/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
+        <html lang="ro" />
       </Helmet>
       
       <Banner />
