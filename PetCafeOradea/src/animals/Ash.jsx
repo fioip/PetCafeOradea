@@ -1,4 +1,3 @@
-import React from 'react';
 import AnimalPage from './AnimalPage';
 import { Ash } from '../constants/AnimalDescription'; // Asigură-te că calea este corectă
 

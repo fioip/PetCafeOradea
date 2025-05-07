@@ -1,8 +1,7 @@
-import React from 'react';
 import AnimalPage from './AnimalPage';
 import { Daisy } from '../constants/AnimalDescription'; // Asigură-te că calea este corectă
 
-const MiraPage = () => {
+const DaisyPage = () => {
   const daisyData = Daisy[0];
 
   return (
