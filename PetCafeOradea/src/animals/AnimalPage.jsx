@@ -14,7 +14,6 @@ import {
   Winnie,
 } from "../constants/AnimalDescription";
 import Footer from "../components/Footer";
-import ScrollToTopButton from "./TopPageButton";
 import { Helmet } from "react-helmet-async"; // Add Helmet for SEO
 
 const AnimalPage = () => {
@@ -400,9 +399,6 @@ const AnimalPage = () => {
           </div>
         </div>
       )}
-
-      {/* Include butonul TopPage */}
-      <ScrollToTopButton isVisible={isVisible} />
 
       <Footer />
     </div>
