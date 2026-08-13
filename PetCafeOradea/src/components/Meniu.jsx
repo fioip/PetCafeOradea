@@ -8,7 +8,6 @@ import {
   EXTRA,
   FRESH,
   GUSTARI,
-  ICE_TEA,
   LIMONADA,
   RACORITOARE,
   VIN,
@@ -20,7 +19,6 @@ import cocktails from "../assets/photos/cocktails.jpg";
 import coffee from "../assets/photos/coffee.jpg";
 import fresh from "../assets/photos/fresh.jpg";
 import gustari from "../assets/photos/gustari.jpg";
-import iceTea from "../assets/photos/iceTea.jpg";
 import limonada from "../assets/photos/limonada.jpg";
 import racoritoare from "../assets/photos/racoritoare.jpg";
 import bere from "../assets/photos/beer.jpg";
@@ -90,180 +88,6 @@ function Meniu() {
                             lg:text-2xl"
               >
                 {cafea.pret}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/*  Ceai de specialitate */}
-        <div className="relative flex flex-col p-4">
-          <div className="relative flex justify-center items-center">
-            <h1
-              className="absolute flex justify-center items-center text-xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-3 w-4/5 max-w-full
-                 sm:text-xl sm:p-3
-                    md:text-4xl md:p-4
-                    lg:text-3xl lg:p-4
-                    xl:text-3xl xl:p-4"
-              style={{ zIndex: 1 }}
-            >
-              Ceai de specialitate
-            </h1>
-
-            <img
-              src={ceai}
-              alt="ceai"
-              width={700}
-              height={300}
-              className="rounded-3xl"
-            />
-          </div>
-
-          {CEAI.map((ceai, index) => (
-            <div
-              key={index}
-              className="w-full flex flex-row justify-between mt-6"
-            >
-              <div>
-                <p
-                  className="text-[#633404] font-semibold text-xl
-                            md:text-2xl
-                            lg:text-2xl"
-                >
-                  {ceai.denumire}
-                </p>
-                {ceai.gramaj && (
-                  <span
-                    className="italic font-normal text-base text-[#EF7F00]
-                                md:text-lg
-                                lg:text-xl
-                                xl:text-xl"
-                  >
-                    {ceai.gramaj}
-                  </span>
-                )}
-              </div>
-              <span
-                className="text-[#633404] font-semibold text-xl
-                            md:text-2xl
-                            lg:text-2xl"
-              >
-                {ceai.pret}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* Arome */}
-        <div className="relative flex flex-col p-4">
-          <div className="relative flex justify-center items-center">
-            <h1
-              className="absolute flex justify-center items-center text-xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-3 w-4/5 max-w-full
-                  sm:text-xl sm:p-3
-                    md:text-4xl md:p-4
-                    lg:text-3xl lg:p-4
-                    xl:text-3xl xl:p-4"
-              style={{ zIndex: 1 }}
-            >
-              Arome
-            </h1>
-
-            <img
-              src={arome}
-              alt="arome"
-              width={700}
-              height={300}
-              className="rounded-3xl"
-            />
-          </div>
-
-          {AROME.map((arome, index) => (
-            <div
-              key={index}
-              className="w-full flex flex-row justify-between mt-6"
-            >
-              <div>
-                <p
-                  className="text-[#633404] font-semibold text-xl
-                            md:text-2xl
-                            lg:text-2xl"
-                >
-                  {arome.denumire}
-                </p>
-                {arome.gramaj && (
-                  <span
-                    className="italic font-normal text-base text-[#EF7F00]
-                                md:text-lg
-                                lg:text-xl
-                                xl:text-xl"
-                  >
-                    {arome.gramaj}
-                  </span>
-                )}
-              </div>
-              <span
-                className="text-[#633404] font-semibold text-xl
-                            md:text-2xl
-                            lg:text-2xl"
-              >
-                {arome.pret}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* Ice Tea */}
-        <div className="relative flex flex-col p-4">
-          <div className="relative flex justify-center items-center">
-            <h1
-              className="absolute flex justify-center items-center text-xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-3 w-4/5 max-w-full
-                sm:text-xl sm:p-3
-                    md:text-4xl md:p-4
-                    lg:text-3xl lg:p-4
-                    xl:text-3xl xl:p-4"
-              style={{ zIndex: 1 }}
-            >
-              Ice Tea
-            </h1>
-
-            <img
-              src={iceTea}
-              alt="iceTea"
-              width={700}
-              height={300}
-              className="rounded-3xl"
-            />
-          </div>
-
-          {ICE_TEA.map((iceTea, index) => (
-            <div
-              key={index}
-              className="w-full flex flex-row justify-between mt-6"
-            >
-              <div>
-                <p
-                  className="text-[#633404] font-semibold text-xl
-                            md:text-2xl
-                            lg:text-2xl"
-                >
-                  {iceTea.denumire}
-                </p>
-                {iceTea.gramaj && (
-                  <span
-                    className="italic font-normal text-base text-[#EF7F00]
-                                md:text-lg
-                                lg:text-xl
-                                xl:text-xl"
-                  >
-                    {iceTea.gramaj}
-                  </span>
-                )}
-              </div>
-              <span
-                className="text-[#633404] font-semibold text-xl
-                            md:text-2xl
-                            lg:text-2xl"
-              >
-                {iceTea.pret}
               </span>
             </div>
           ))}
@@ -380,6 +204,182 @@ function Meniu() {
                             lg:text-2xl"
               >
                 {limonada.pret}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Arome */}
+        <div className="relative flex flex-col p-4">
+          <div className="relative flex justify-center items-center">
+            <h1
+              className="absolute flex justify-center items-center text-xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-3 w-4/5 max-w-full
+                  sm:text-xl sm:p-3
+                    md:text-4xl md:p-4
+                    lg:text-3xl lg:p-4
+                    xl:text-3xl xl:p-4"
+              style={{ zIndex: 1 }}
+            >
+              Arome
+            </h1>
+
+            <img
+              src={arome}
+              alt="arome"
+              width={700}
+              height={300}
+              className="rounded-3xl"
+            />
+          </div>
+
+          {AROME.map((arome, index) => (
+            <div
+              key={index}
+              className="w-full flex flex-row justify-between mt-6"
+            >
+              <div>
+                <p
+                  className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+                >
+                  {arome.denumire}
+                </p>
+                {arome.gramaj && (
+                  <span
+                    className="italic font-normal text-base text-[#EF7F00]
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {arome.gramaj}
+                  </span>
+                )}
+              </div>
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {arome.pret}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/*  Ceai de specialitate */}
+        <div className="relative flex flex-col p-4">
+          <div className="relative flex justify-center items-center">
+            <h1
+              className="absolute flex justify-center items-center text-xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-3 w-4/5 max-w-full
+                 sm:text-xl sm:p-3
+                    md:text-4xl md:p-4
+                    lg:text-3xl lg:p-4
+                    xl:text-3xl xl:p-4"
+              style={{ zIndex: 1 }}
+            >
+              Ceai de specialitate
+            </h1>
+
+            <img
+              src={ceai}
+              alt="ceai"
+              width={700}
+              height={300}
+              className="rounded-3xl"
+            />
+          </div>
+
+          {CEAI.map((ceai, index) => (
+            <div
+              key={index}
+              className="w-full flex flex-row justify-between mt-6"
+            >
+              <div>
+                <p
+                  className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+                >
+                  {ceai.denumire}
+                </p>
+                {ceai.gramaj && (
+                  <span
+                    className="italic font-normal text-base text-[#EF7F00]
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {ceai.gramaj}
+                  </span>
+                )}
+              </div>
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+              >
+                {ceai.pret}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Cocktails */}
+        <div className="relative flex flex-col p-4">
+          <div className="relative flex justify-center items-center">
+            <h1
+              className="absolute flex justify-center items-center text-xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-3 w-4/5 max-w-full
+                sm:text-xl sm:p-3
+                    md:text-4xl md:p-4
+                    lg:text-3xl lg:p-4
+                    xl:text-3xl xl:p-4"
+              style={{ zIndex: 1 }}
+            >
+              Cocktails
+            </h1>
+
+            <img
+              src={cocktails}
+              alt="cocktails"
+              width={700}
+              height={300}
+              className="rounded-3xl"
+            />
+          </div>
+
+          {COCKTAILS.map((cocktails, index) => (
+            <div
+              key={index}
+              className="w-full flex flex-row justify-between mt-6 items-start"
+            >
+              <div className="max-w-[80%]">
+                {" "}
+                <p
+                  className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl"
+                >
+                  {cocktails.denumire}
+                </p>
+                {cocktails.gramaj && (
+                  <span
+                    className="italic font-normal text-base text-[#EF7F00]
+                                md:text-lg
+                                lg:text-xl
+                                xl:text-xl"
+                  >
+                    {cocktails.gramaj}
+                  </span>
+                )}
+              </div>
+              <span
+                className="text-[#633404] font-semibold text-xl
+                            md:text-2xl
+                            lg:text-2xl
+                            whitespace-nowrap ml-4"
+              >
+                {cocktails.pret}
               </span>
             </div>
           ))}
@@ -554,66 +554,6 @@ function Meniu() {
                             lg:text-2xl"
               >
                 {bere.pret}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* Cocktails */}
-        <div className="relative flex flex-col p-4">
-          <div className="relative flex justify-center items-center">
-            <h1
-              className="absolute flex justify-center items-center text-xl text-[#FEF2DA] font-bold bg-[#633404]/80 rounded-2xl p-3 w-4/5 max-w-full
-                sm:text-xl sm:p-3
-                    md:text-4xl md:p-4
-                    lg:text-3xl lg:p-4
-                    xl:text-3xl xl:p-4"
-              style={{ zIndex: 1 }}
-            >
-              Cocktails
-            </h1>
-
-            <img
-              src={cocktails}
-              alt="cocktails"
-              width={700}
-              height={300}
-              className="rounded-3xl"
-            />
-          </div>
-
-          {COCKTAILS.map((cocktails, index) => (
-            <div
-              key={index}
-              className="w-full flex flex-row justify-between mt-6 items-start"
-            >
-              <div className="max-w-[80%]">
-                {" "}
-                <p
-                  className="text-[#633404] font-semibold text-xl
-                            md:text-2xl
-                            lg:text-2xl"
-                >
-                  {cocktails.denumire}
-                </p>
-                {cocktails.gramaj && (
-                  <span
-                    className="italic font-normal text-base text-[#EF7F00]
-                                md:text-lg
-                                lg:text-xl
-                                xl:text-xl"
-                  >
-                    {cocktails.gramaj}
-                  </span>
-                )}
-              </div>
-              <span
-                className="text-[#633404] font-semibold text-xl
-                            md:text-2xl
-                            lg:text-2xl
-                            whitespace-nowrap ml-4"
-              >
-                {cocktails.pret}
               </span>
             </div>
           ))}
